@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenPresenter.hpp:28:13:ClearScreenPresenter::~ClearScreenPresenter()	0	static
+C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenPresenter.cpp:10:6:virtual void ClearScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenPresenter.hpp:28:13:virtual ClearScreenPresenter::~ClearScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenPresenter.hpp:28:13:virtual void* ClearScreenPresenter::_ZThn4_N20ClearScreenPresenterD1Ev()	0	static
+C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenPresenter.cpp:4:1:ClearScreenPresenter::ClearScreenPresenter(ClearScreenView&)	0	static

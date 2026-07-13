@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenPresenter.hpp:28:13:PauseScreenPresenter::~PauseScreenPresenter()	1
+C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/pausescreen_screen/PauseScreenPresenter.cpp:10:6:virtual void PauseScreenPresenter::activate()	1
+../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenPresenter.hpp:28:13:virtual PauseScreenPresenter::~PauseScreenPresenter()	1
+../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenPresenter.hpp:28:13:virtual void* PauseScreenPresenter::_ZThn4_N20PauseScreenPresenterD1Ev()	1
+C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/pausescreen_screen/PauseScreenPresenter.cpp:4:1:PauseScreenPresenter::PauseScreenPresenter(PauseScreenView&)	1
