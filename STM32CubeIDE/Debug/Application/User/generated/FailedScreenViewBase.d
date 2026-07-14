@@ -1,5 +1,5 @@
 Application/User/generated/FailedScreenViewBase.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

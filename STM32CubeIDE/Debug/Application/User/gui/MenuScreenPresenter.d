@@ -1,5 +1,5 @@
 Application/User/gui/MenuScreenPresenter.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/menuscreen_screen/MenuScreenPresenter.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/menuscreen_screen/MenuScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/menuscreen_screen/MenuScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

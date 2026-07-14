@@ -1,5 +1,5 @@
 Application/User/generated/FrontendApplicationBase.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp \
@@ -88,12 +88,6 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/clearscreen_screen/ClearScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenPresenter.hpp \
- ../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenView.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/pausescreen_screen/PauseScreenViewBase.hpp \
- ../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenPresenter.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -185,12 +179,6 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/clearscreen_screen/ClearScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenPresenter.hpp:
-../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenView.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/pausescreen_screen/PauseScreenViewBase.hpp:
-../../TouchGFX/gui/include/gui/pausescreen_screen/PauseScreenPresenter.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

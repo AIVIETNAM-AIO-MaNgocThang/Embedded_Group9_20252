@@ -19,36 +19,44 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContainer::handlePressedUpdated()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	1
+../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:27:18:virtual void GameScreenViewBase::function1()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<GameScreenPresenter>::~View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::Image>::~MoveAnimator()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:35:7:touchgfx::TouchButtonTrigger::~TouchButtonTrigger()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:44:7:touchgfx::IconButtonStyle<touchgfx::TouchButtonTrigger>::~IconButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::TouchButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:31:1:GameScreenViewBase::~GameScreenViewBase()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:36:6:virtual void GameScreenViewBase::setupScreen()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:61:1:GameScreenViewBase::~GameScreenViewBase()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:66:6:virtual void GameScreenViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::TouchButtonTrigger]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = GameScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = GameScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::TouchButtonTrigger]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:144:18:void touchgfx::IconButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::TouchButtonTrigger]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::Image]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::Image]	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:137:18:void touchgfx::IconButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::TouchButtonTrigger]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:35:7:virtual touchgfx::TouchButtonTrigger::~TouchButtonTrigger()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<GameScreenPresenter>::~View()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:44:7:virtual touchgfx::IconButtonStyle<touchgfx::TouchButtonTrigger>::~IconButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::Image>::~MoveAnimator()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::TouchButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:31:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:61:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:118:18:virtual void touchgfx::Image::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:47:18:virtual void touchgfx::TouchButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	5
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:41:6:void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:71:6:void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	4
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::Image]	6
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:59:18:void touchgfx::IconButtonStyle<T>::setIconBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&) [with T = touchgfx::TouchButtonTrigger]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:8:1:GameScreenViewBase::GameScreenViewBase()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:70:10:void touchgfx::AbstractButtonContainer::setAlpha(uint8_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::TouchButtonTrigger]	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:8:1:GameScreenViewBase::GameScreenViewBase()	1

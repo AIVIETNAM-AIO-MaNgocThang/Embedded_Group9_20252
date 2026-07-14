@@ -33,9 +33,6 @@ public:
     // FailedScreen
     void gotoFailedScreenScreenNoTransition();
 
-    // PauseScreen
-    void gotoPauseScreenScreenSlideTransitionNorth();
-
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -53,9 +50,6 @@ protected:
 
     // FailedScreen
     void gotoFailedScreenScreenNoTransitionImpl();
-
-    // PauseScreen
-    void gotoPauseScreenScreenSlideTransitionNorthImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

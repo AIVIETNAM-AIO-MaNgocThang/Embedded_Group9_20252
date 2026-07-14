@@ -23,8 +23,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ClearScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:36:1:ClearScreenViewBase::~ClearScreenViewBase()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:41:6:virtual void ClearScreenViewBase::setupScreen()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:36:1:ClearScreenViewBase::~ClearScreenViewBase()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:41:6:virtual void ClearScreenViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = ClearScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = ClearScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	3
@@ -34,15 +34,15 @@ C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscree
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<ClearScreenPresenter>::~View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ClearScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:36:1:virtual ClearScreenViewBase::~ClearScreenViewBase()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:36:1:virtual ClearScreenViewBase::~ClearScreenViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	6
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:46:6:void ClearScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:46:6:void ClearScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:8:1:ClearScreenViewBase::ClearScreenViewBase()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/clearscreen_screen/ClearScreenViewBase.cpp:8:1:ClearScreenViewBase::ClearScreenViewBase()	1

@@ -12,6 +12,7 @@
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/containers/Container.hpp>
 
 class GameScreenViewBase : public touchgfx::View<GameScreenPresenter>
 {
@@ -19,6 +20,14 @@ public:
     GameScreenViewBase();
     virtual ~GameScreenViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void function1()
+    {
+        // Override and implement this function in GameScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -32,6 +41,11 @@ protected:
     touchgfx::MoveAnimator< touchgfx::Image > backgroundImage;
     touchgfx::Image playerImage;
     touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  pauseButton;
+    touchgfx::Container pauseOverlay;
+    touchgfx::Image image1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  continueButton;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  quitButton;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  tryAgainButton;
 
 private:
 

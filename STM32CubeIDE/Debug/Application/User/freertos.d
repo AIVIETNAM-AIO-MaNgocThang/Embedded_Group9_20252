@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/TouchGFXProjects/GeometryDash/Core/Src/freertos.c \
+ C:/TouchGFXProjects/Embedded_Group9_20252/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

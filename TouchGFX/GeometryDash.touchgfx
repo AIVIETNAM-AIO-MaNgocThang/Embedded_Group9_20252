@@ -105,20 +105,171 @@
                 "IconPressed": "__generated\\icon_theme_images_av_pause_50_50_E8F6FB.svg.png"
               }
             ]
+          },
+          {
+            "Type": "Container",
+            "Name": "pauseOverlay",
+            "Width": 320,
+            "Height": 240,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "image1",
+                "Width": 320,
+                "Height": 240,
+                "RelativeFilename": "pause_screen_320x240.png"
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "continueButton",
+                "X": 99,
+                "Y": 180,
+                "Width": 128,
+                "Height": 41,
+                "Alpha": 0,
+                "ButtonTrigger": {
+                  "Type": "TouchButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 128,
+                    "Height": 41,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "quitButton",
+                "X": 190,
+                "Y": 128,
+                "Width": 93,
+                "Height": 42,
+                "Alpha": 0,
+                "ButtonTrigger": {
+                  "Type": "TouchButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 93,
+                    "Height": 42,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "tryAgainButton",
+                "X": 41,
+                "Y": 128,
+                "Width": 130,
+                "Height": 42,
+                "Alpha": 0,
+                "ButtonTrigger": {
+                  "Type": "TouchButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 130,
+                    "Height": 42,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "pauseButtonInteraction",
+            "InteractionName": "tryAgainInteraction",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "pauseButton"
+              "TriggerComponent": "tryAgainButton"
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "North",
-              "ActionComponent": "PauseScreen"
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GameScreen"
+            }
+          },
+          {
+            "InteractionName": "quitInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "quitButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "FailedScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "continueButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function1"
             }
           }
         ]
@@ -347,170 +498,6 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionBlock",
               "ActionComponent": "MenuScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "PauseScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "image1",
-            "Width": 320,
-            "Height": 240,
-            "RelativeFilename": "pause_screen_320x240.png"
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "continueButton",
-            "X": 99,
-            "Y": 180,
-            "Width": 128,
-            "Height": 41,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 128,
-                "Height": 41,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "quitButton",
-            "X": 190,
-            "Y": 128,
-            "Width": 93,
-            "Height": 42,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 93,
-                "Height": 42,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "tryAgainButton",
-            "X": 41,
-            "Y": 128,
-            "Width": 130,
-            "Height": 42,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 130,
-                "Height": 42,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "tryAgainButtonInteraction",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "quitButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "GameScreen"
-            }
-          },
-          {
-            "InteractionName": "quitButtonInteraction",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "tryAgainButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "FailedScreen"
-            }
-          },
-          {
-            "InteractionName": "continueButtonInteraction",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "continueButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "GameScreen"
             }
           }
         ]

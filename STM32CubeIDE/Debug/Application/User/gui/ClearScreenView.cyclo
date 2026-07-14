@@ -1,8 +1,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:13:6:virtual void ClearScreenView::tearDownScreen()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:13:6:virtual void ClearScreenView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenView.hpp:11:13:ClearScreenView::~ClearScreenView()	1
 ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenView.hpp:11:13:virtual ClearScreenView::~ClearScreenView()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:3:1:ClearScreenView::ClearScreenView()	1
-C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:8:6:virtual void ClearScreenView::setupScreen()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:3:1:ClearScreenView::ClearScreenView()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/clearscreen_screen/ClearScreenView.cpp:8:6:virtual void ClearScreenView::setupScreen()	1

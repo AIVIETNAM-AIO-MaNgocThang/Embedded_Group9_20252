@@ -23,8 +23,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:35:7:touchgfx::TouchButtonTrigger::~TouchButtonTrigger()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::TouchButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<FailedScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:36:1:FailedScreenViewBase::~FailedScreenViewBase()	0	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:41:6:virtual void FailedScreenViewBase::setupScreen()	0	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:36:1:FailedScreenViewBase::~FailedScreenViewBase()	0	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:41:6:virtual void FailedScreenViewBase::setupScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::TouchButtonTrigger]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = FailedScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = FailedScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -34,15 +34,15 @@ C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscre
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<FailedScreenPresenter>::~View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::TouchButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<FailedScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:36:1:virtual FailedScreenViewBase::~FailedScreenViewBase()	8	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:36:1:virtual FailedScreenViewBase::~FailedScreenViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:47:18:virtual void touchgfx::TouchButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:46:6:void FailedScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:46:6:void FailedScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::TouchButtonTrigger]	16	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:8:1:FailedScreenViewBase::FailedScreenViewBase()	56	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/failedscreen_screen/FailedScreenViewBase.cpp:8:1:FailedScreenViewBase::FailedScreenViewBase()	56	static

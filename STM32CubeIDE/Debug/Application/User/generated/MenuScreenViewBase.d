@@ -1,5 +1,5 @@
 Application/User/generated/MenuScreenViewBase.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

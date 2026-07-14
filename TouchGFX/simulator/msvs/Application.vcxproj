@@ -33,9 +33,6 @@
     <ClCompile Include="..\..\gui\src\clearscreen_screen\ClearScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\clearscreen_screen\ClearScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\clearscreen_screen\ClearScreenViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\pausescreen_screen\PauseScreenPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\pausescreen_screen\PauseScreenView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\pausescreen_screen\PauseScreenViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -198,9 +195,6 @@
     <ClInclude Include="..\..\gui\include\gui\clearscreen_screen\ClearScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\clearscreen_screen\ClearScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\clearscreen_screen\ClearScreenViewBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\pausescreen_screen\PauseScreenPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\pausescreen_screen\PauseScreenView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\pausescreen_screen\PauseScreenViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

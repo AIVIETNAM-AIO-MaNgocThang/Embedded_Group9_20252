@@ -17,8 +17,6 @@
 #include <gui/failedscreen_screen/FailedScreenPresenter.hpp>
 #include <gui/clearscreen_screen/ClearScreenView.hpp>
 #include <gui/clearscreen_screen/ClearScreenPresenter.hpp>
-#include <gui/pausescreen_screen/PauseScreenView.hpp>
-#include <gui/pausescreen_screen/PauseScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -97,17 +95,4 @@ void FrontendApplicationBase::gotoFailedScreenScreenNoTransition()
 void FrontendApplicationBase::gotoFailedScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<FailedScreenView, FailedScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-// PauseScreen
-
-void FrontendApplicationBase::gotoPauseScreenScreenSlideTransitionNorth()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoPauseScreenScreenSlideTransitionNorthImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoPauseScreenScreenSlideTransitionNorthImpl()
-{
-    touchgfx::makeTransition<PauseScreenView, PauseScreenPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

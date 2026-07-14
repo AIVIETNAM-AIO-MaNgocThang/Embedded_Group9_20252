@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:FailedScreenPresenter::~FailedScreenPresenter()	0	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:10:6:virtual void FailedScreenPresenter::activate()	0	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:10:6:virtual void FailedScreenPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:virtual FailedScreenPresenter::~FailedScreenPresenter()	8	static
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:virtual void* FailedScreenPresenter::_ZThn4_N21FailedScreenPresenterD1Ev()	0	static
-C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:4:1:FailedScreenPresenter::FailedScreenPresenter(FailedScreenView&)	0	static
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:4:1:FailedScreenPresenter::FailedScreenPresenter(FailedScreenView&)	0	static

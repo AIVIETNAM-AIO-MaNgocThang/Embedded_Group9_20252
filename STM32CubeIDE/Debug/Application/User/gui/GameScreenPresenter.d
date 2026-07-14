@@ -1,5 +1,5 @@
 Application/User/gui/GameScreenPresenter.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

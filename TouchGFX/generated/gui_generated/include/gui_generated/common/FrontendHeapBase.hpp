@@ -23,8 +23,6 @@
 #include <gui/failedscreen_screen/FailedScreenPresenter.hpp>
 #include <gui/clearscreen_screen/ClearScreenView.hpp>
 #include <gui/clearscreen_screen/ClearScreenPresenter.hpp>
-#include <gui/pausescreen_screen/PauseScreenView.hpp>
-#include <gui/pausescreen_screen/PauseScreenPresenter.hpp>
 
 
 /**
@@ -51,8 +49,7 @@ public:
             touchgfx::meta::TypeList< GameScreenView,
             touchgfx::meta::TypeList< FailedScreenView,
             touchgfx::meta::TypeList< ClearScreenView,
-            touchgfx::meta::TypeList< PauseScreenView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -68,8 +65,7 @@ public:
             touchgfx::meta::TypeList< GameScreenPresenter,
             touchgfx::meta::TypeList< FailedScreenPresenter,
             touchgfx::meta::TypeList< ClearScreenPresenter,
-            touchgfx::meta::TypeList< PauseScreenPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -83,9 +79,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::TypeList< SlideTransition<NORTH>,
             touchgfx::meta::TypeList< BlockTransition,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**

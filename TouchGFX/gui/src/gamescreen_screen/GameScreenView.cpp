@@ -2,7 +2,17 @@
 #include <touchgfx/Color.hpp>
 
 GameScreenView::GameScreenView()
-    : playerVelY(0), isJumping(false), spawnTimer(0), spawnInterval(90)
+    : playerVelY(0),
+	  isJumping(false),
+	  spawnTimer(0),
+	  spawnInterval(90),
+	  pauseButtonClickedCallback(this, &GameScreenView::pauseButtonClicked),
+	  continueButtonClickedCallback(this, &GameScreenView::continueButtonClicked),
+	  tryAgainButtonClickedCallback(this, &GameScreenView::tryAgainButtonClicked),
+	  quitButtonClickedCallback(this, &GameScreenView::quitButtonClicked),
+	  isPaused(false),
+	  ignoreNextClick(false),
+	  gameOverTriggered(false)
 {
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
@@ -35,6 +45,29 @@ void GameScreenView::setupScreen()
         obstacles[i].img.setVisible(false);
         add(obstacles[i].img);
     }
+
+    // --- Pause button ---
+    remove(pauseButton);
+    add(pauseButton);
+
+    remove(pauseOverlay);
+    add(pauseOverlay);
+
+    pauseOverlay.setVisible(false);
+
+    pauseButton.setAction(pauseButtonClickedCallback);
+    pauseButton.setVisible(true);
+
+    // --- Continue button ---
+    continueButton.setAction(continueButtonClickedCallback);
+
+
+    // --- TryAgain button ---
+    tryAgainButton.setAction(tryAgainButtonClickedCallback);
+
+    // --- Quit button ---
+    quitButton.setAction(quitButtonClickedCallback);
+    invalidate();
 }
 
 void GameScreenView::tearDownScreen()
@@ -46,14 +79,17 @@ void GameScreenView::handleTickEvent()
 {
     GameScreenViewBase::handleTickEvent();
 
-    // ===== 1. Cuộn nền =====
+    // ===== Pause =====
+    if (isPaused) return;
+
+    // ===== Cuộn nền =====
     bg1.moveTo(bg1.getX() - SCROLL_SPEED, bg1.getY());
     bg2.moveTo(bg2.getX() - SCROLL_SPEED, bg2.getY());
 
     if (bg1.getX() <= -BG_WIDTH) bg1.moveTo(bg2.getX() + BG_WIDTH, bg1.getY());
     if (bg2.getX() <= -BG_WIDTH) bg2.moveTo(bg1.getX() + BG_WIDTH, bg2.getY());
 
-    // ===== 2. Vật lý nhân vật (nhảy/rơi) =====
+    // ===== Vật lý nhân vật (nhảy/rơi) =====
     playerVelY += GRAVITY;
     int16_t newY = player.getY() + (int16_t)playerVelY;
 
@@ -65,7 +101,7 @@ void GameScreenView::handleTickEvent()
     }
     player.moveTo(player.getX(), newY);
 
-    // ===== 3. Spawn & update obstacle =====
+    // ===== Spawn & update obstacle =====
     spawnTimer++;
     if (spawnTimer >= spawnInterval)
     {
@@ -100,17 +136,16 @@ void GameScreenView::updateObstacles()
         obstacles[i].img.moveTo(obstacles[i].img.getX() - SCROLL_SPEED,
                                  obstacles[i].img.getY());
 
-        // Ra khỏi màn hình bên trái -> tắt, tái sử dụng slot
         if (obstacles[i].img.getX() < -(int16_t)obstacles[i].img.getWidth())
         {
             obstacles[i].img.setVisible(false);
             obstacles[i].active = false;
         }
 
-        // Va chạm với player
-        if (checkCollision(player, obstacles[i].img))
+        if (!gameOverTriggered && checkCollision(player, obstacles[i].img))
         {
             onPlayerHit();
+            return; // thoát sớm, khỏi cần xử lý tiếp obstacle khác trong frame này
         }
     }
 }
@@ -125,17 +160,59 @@ bool GameScreenView::checkCollision(const Image& a, const Image& b)
 
 void GameScreenView::onPlayerHit()
 {
-    // TODO: chuyển sang màn RESULT_FAILED
-    // Ví dụ: application().gotoResultFailedScreenNoTransition();
+    if (gameOverTriggered) return;
+    gameOverTriggered = true;
+
+    isPaused = true; // chặn tick tiếp tục chạy trong lúc chuyển màn hình
+
+    application().gotoFailedScreenScreenNoTransition();
+    // hoặc dùng transition nếu bạn đã cấu hình trong Designer:
+    // application().gotoResultFailedScreen();
 }
 
 void GameScreenView::handleClickEvent(const touchgfx::ClickEvent& evt)
 {
     GameScreenViewBase::handleClickEvent(evt);
 
+    if (isPaused) return;
+
+    // ===== Continue logic =====
+    	if (ignoreNextClick)
+    		{
+    			ignoreNextClick = false;
+    			return;
+    		}
     if (evt.getType() == ClickEvent::PRESSED && !isJumping)
     {
         playerVelY = JUMP_STRENGTH;
         isJumping = true;
     }
+}
+
+void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer& src)
+{
+    isPaused = true;
+
+    pauseOverlay.setVisible(true);
+    pauseOverlay.invalidate();
+}
+
+void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer& src)
+{
+    isPaused = false;
+
+    ignoreNextClick = true;
+
+    pauseOverlay.setVisible(false);
+    pauseOverlay.invalidate();
+}
+
+void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer& src)
+{
+	application().gotoFailedScreenScreenNoTransition();
+}
+
+void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer& src)
+{
+	application().gotoGameScreenScreenNoTransition();
 }

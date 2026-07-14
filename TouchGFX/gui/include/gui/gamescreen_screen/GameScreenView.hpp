@@ -3,6 +3,7 @@
 
 #include <gui_generated/gamescreen_screen/GameScreenViewBase.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
+#include <touchgfx/Callback.hpp>
 
 class GameScreenView : public GameScreenViewBase
 {
@@ -33,6 +34,27 @@ protected:
     static constexpr float GRAVITY      = 0.6f;
     static constexpr float JUMP_STRENGTH = -8.0f;
 
+    // ---- Pause ----
+    bool isPaused;
+    touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&> pauseButtonClickedCallback;
+    void pauseButtonClicked(const touchgfx::AbstractButtonContainer& src);
+
+    // ---- Continue ----
+    bool ignoreNextClick;
+    touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&> continueButtonClickedCallback;
+    void continueButtonClicked(const touchgfx::AbstractButtonContainer& src);
+
+    // ---- Try Again ----
+    touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&> tryAgainButtonClickedCallback;
+	void tryAgainButtonClicked(const touchgfx::AbstractButtonContainer& src);
+	void resetGame();
+
+	// ---- Quit ----
+	touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&> quitButtonClickedCallback;
+	void quitButtonClicked(const touchgfx::AbstractButtonContainer& src);
+
+    // ---- Game Over guard ----
+    bool gameOverTriggered;
     // ---- Vật cản ----
     static const int MAX_OBSTACLES = 5;
     struct Obstacle

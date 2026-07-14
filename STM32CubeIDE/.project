@@ -360,16 +360,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/model/Model.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/PauseScreenPresenter.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/pausescreen_screen/PauseScreenPresenter.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/PauseScreenView.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/pausescreen_screen/PauseScreenView.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -470,11 +460,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/PauseScreenViewBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/pausescreen_screen/PauseScreenViewBase.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
@@ -485,14 +470,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</name>
+			<name>Application/User/generated/image_icon_theme_images_av_pause_50_50_E8F6FB.svg.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_av_pause_50_50_E8F6FB.svg.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</name>
+			<name>Application/User/generated/image_icon_theme_images_av_pause_50_50_FFFFFF.svg.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_av_pause_50_50_FFFFFF.svg.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_backgroundImage.cpp</name>
@@ -528,6 +513,11 @@
 			<name>Application/User/generated/image_menuImage.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_menuImage.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_pause_screen_320x240.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_pause_screen_320x240.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_playerImage.cpp</name>

@@ -22,9 +22,40 @@ GameScreenViewBase::GameScreenViewBase() :
 
     pauseButton.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_AV_PAUSE_50_50_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_AV_PAUSE_50_50_E8F6FB_SVG_ID));
     pauseButton.setIconXY(12, -7);
-    pauseButton.setAction(flexButtonCallback);
     pauseButton.setPosition(124, 8, 72, 33);
     add(pauseButton);
+
+    pauseOverlay.setPosition(0, 0, 320, 240);
+    pauseOverlay.setVisible(false);
+    image1.setXY(0, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_PAUSE_SCREEN_320X240_ID));
+    pauseOverlay.add(image1);
+
+    continueButton.setBoxWithBorderPosition(0, 0, 128, 41);
+    continueButton.setBorderSize(5);
+    continueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    continueButton.setAlpha(0);
+    continueButton.setAction(flexButtonCallback);
+    continueButton.setPosition(99, 180, 128, 41);
+    pauseOverlay.add(continueButton);
+
+    quitButton.setBoxWithBorderPosition(0, 0, 93, 42);
+    quitButton.setBorderSize(5);
+    quitButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    quitButton.setAlpha(0);
+    quitButton.setAction(flexButtonCallback);
+    quitButton.setPosition(190, 128, 93, 42);
+    pauseOverlay.add(quitButton);
+
+    tryAgainButton.setBoxWithBorderPosition(0, 0, 130, 42);
+    tryAgainButton.setBorderSize(5);
+    tryAgainButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    tryAgainButton.setAlpha(0);
+    tryAgainButton.setAction(flexButtonCallback);
+    tryAgainButton.setPosition(41, 128, 130, 42);
+    pauseOverlay.add(tryAgainButton);
+
+    add(pauseOverlay);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
@@ -39,11 +70,25 @@ void GameScreenViewBase::setupScreen()
 
 void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &pauseButton)
+    if (&src == &tryAgainButton)
     {
-        //pauseButtonInteraction
-        //When pauseButton clicked change screen to PauseScreen
-        //Go to PauseScreen with screen transition towards North
-        application().gotoPauseScreenScreenSlideTransitionNorth();
+        //tryAgainInteraction
+        //When tryAgainButton clicked change screen to GameScreen
+        //Go to GameScreen with no screen transition
+        application().gotoGameScreenScreenNoTransition();
+    }
+    if (&src == &quitButton)
+    {
+        //quitInteraction
+        //When quitButton clicked change screen to FailedScreen
+        //Go to FailedScreen with no screen transition
+        application().gotoFailedScreenScreenNoTransition();
+    }
+    if (&src == &continueButton)
+    {
+        //Interaction1
+        //When continueButton clicked call virtual function
+        //Call function1
+        function1();
     }
 }

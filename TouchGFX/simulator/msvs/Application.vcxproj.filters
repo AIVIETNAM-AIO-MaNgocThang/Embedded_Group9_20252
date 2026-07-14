@@ -220,18 +220,6 @@
     <Filter Include="Source Files\generated\gui_generated\clearscreen_screen">
       <UniqueIdentifier>52C4F572-ABED-5C24-10B1-08BCDA4961A7</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\pausescreen_screen">
-      <UniqueIdentifier>F25AEB68-8DE9-D619-1732-B59BFDCB1100</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\pausescreen_screen">
-      <UniqueIdentifier>69CB3EC6-E3F8-C705-71DD-88E4212160E0</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\pausescreen_screen">
-      <UniqueIdentifier>B3341294-7B58-46A3-079B-F32EC4C120E1</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\pausescreen_screen">
-      <UniqueIdentifier>395A1AC5-6441-2653-2E76-DFD2003D5A65</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -299,15 +287,6 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\clearscreen_screen\ClearScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\clearscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\pausescreen_screen\PauseScreenPresenter.cpp">
-      <Filter>Source Files\gui\pausescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\pausescreen_screen\PauseScreenView.cpp">
-      <Filter>Source Files\gui\pausescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\pausescreen_screen\PauseScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\pausescreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -786,15 +765,6 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\clearscreen_screen\ClearScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\clearscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\pausescreen_screen\PauseScreenPresenter.hpp">
-      <Filter>Header Files\gui\pausescreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\pausescreen_screen\PauseScreenView.hpp">
-      <Filter>Header Files\gui\pausescreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\pausescreen_screen\PauseScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\pausescreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

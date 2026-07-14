@@ -1,5 +1,5 @@
 Application/User/gui/ClearScreenPresenter.o: \
- C:/TouchGFXProjects/GeometryDash/TouchGFX/gui/src/clearscreen_screen/ClearScreenPresenter.cpp \
+ C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/clearscreen_screen/ClearScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/clearscreen_screen/ClearScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/clearscreen_screen/ClearScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
