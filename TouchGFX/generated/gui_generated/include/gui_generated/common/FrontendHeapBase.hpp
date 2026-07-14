@@ -83,8 +83,9 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
+            touchgfx::meta::TypeList< SlideTransition<NORTH>,
             touchgfx::meta::TypeList< BlockTransition,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::Nil > > >
             > GeneratedTransitionTypes;
 
     /**

@@ -31,7 +31,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::MoveAnimator< touchgfx::Image > backgroundImage;
     touchgfx::Image playerImage;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  pauseButton;
+    touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  pauseButton;
 
 private:
 

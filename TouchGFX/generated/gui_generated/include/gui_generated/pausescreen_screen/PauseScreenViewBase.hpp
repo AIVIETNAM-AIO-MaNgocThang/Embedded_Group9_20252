@@ -8,7 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/pausescreen_screen/PauseScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 
 class PauseScreenViewBase : public touchgfx::View<PauseScreenPresenter>
@@ -27,7 +27,7 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::Image image1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  continueButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  quitButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  tryAgainButton;

@@ -98,28 +98,11 @@
             },
             "ButtonStyles": [
               {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 72,
-                "Height": 33,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
+                "Type": "IconButtonStyle",
+                "X": 12,
+                "Y": -7,
+                "IconReleased": "__generated\\icon_theme_images_av_pause_50_50_FFFFFF.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_av_pause_50_50_E8F6FB.svg.png"
               }
             ]
           }
@@ -133,7 +116,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionBlock",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
               "ActionComponent": "PauseScreen"
             }
           }
@@ -371,43 +355,28 @@
         "Name": "PauseScreen",
         "Components": [
           {
-            "Type": "ButtonWithLabel",
-            "Name": "buttonWithLabel1",
-            "X": 31,
-            "Y": 28,
-            "Width": 240,
-            "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
-            "TextId": "__SingleUse_EXLZ",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 320,
+            "Height": 240,
+            "RelativeFilename": "pause_screen_320x240.png"
           },
           {
             "Type": "FlexButton",
             "Name": "continueButton",
-            "X": 92,
-            "Y": 178,
-            "Width": 119,
-            "Height": 50,
+            "X": 99,
+            "Y": 180,
+            "Width": 128,
+            "Height": 41,
+            "Alpha": 0,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "Width": 119,
-                "Height": 50,
+                "Width": 128,
+                "Height": 41,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 5,
                 "ColorReleased": {
@@ -433,18 +402,19 @@
           {
             "Type": "FlexButton",
             "Name": "quitButton",
-            "X": 205,
-            "Y": 120,
-            "Width": 81,
-            "Height": 50,
+            "X": 190,
+            "Y": 128,
+            "Width": 93,
+            "Height": 42,
+            "Alpha": 0,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "Width": 81,
-                "Height": 50,
+                "Width": 93,
+                "Height": 42,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 5,
                 "ColorReleased": {
@@ -470,18 +440,19 @@
           {
             "Type": "FlexButton",
             "Name": "tryAgainButton",
-            "X": 31,
-            "Y": 120,
-            "Width": 81,
-            "Height": 50,
+            "X": 41,
+            "Y": 128,
+            "Width": 130,
+            "Height": 42,
+            "Alpha": 0,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "Width": 81,
-                "Height": 50,
+                "Width": 130,
+                "Height": 42,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 5,
                 "ColorReleased": {

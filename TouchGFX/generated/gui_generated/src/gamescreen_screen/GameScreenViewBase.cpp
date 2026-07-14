@@ -20,9 +20,8 @@ GameScreenViewBase::GameScreenViewBase() :
     playerImage.setBitmap(touchgfx::Bitmap(BITMAP_PLAYERIMAGE_ID));
     add(playerImage);
 
-    pauseButton.setBoxWithBorderPosition(0, 0, 72, 33);
-    pauseButton.setBorderSize(5);
-    pauseButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    pauseButton.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_AV_PAUSE_50_50_FFFFFF_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_AV_PAUSE_50_50_E8F6FB_SVG_ID));
+    pauseButton.setIconXY(12, -7);
     pauseButton.setAction(flexButtonCallback);
     pauseButton.setPosition(124, 8, 72, 33);
     add(pauseButton);
@@ -44,7 +43,7 @@ void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
     {
         //pauseButtonInteraction
         //When pauseButton clicked change screen to PauseScreen
-        //Go to PauseScreen with block transition
-        application().gotoPauseScreenScreenBlockTransition();
+        //Go to PauseScreen with screen transition towards North
+        application().gotoPauseScreenScreenSlideTransitionNorth();
     }
 }

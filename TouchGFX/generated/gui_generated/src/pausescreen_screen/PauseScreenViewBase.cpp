@@ -4,7 +4,6 @@
 #include <gui_generated/pausescreen_screen/PauseScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 
 PauseScreenViewBase::PauseScreenViewBase() :
     flexButtonCallback(this, &PauseScreenViewBase::flexButtonCallbackHandler)
@@ -13,32 +12,32 @@ PauseScreenViewBase::PauseScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    buttonWithLabel1.setXY(31, 28);
-    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
-    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_EXLZ));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(buttonWithLabel1);
+    image1.setXY(0, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_PAUSE_SCREEN_320X240_ID));
+    add(image1);
 
-    continueButton.setBoxWithBorderPosition(0, 0, 119, 50);
+    continueButton.setBoxWithBorderPosition(0, 0, 128, 41);
     continueButton.setBorderSize(5);
     continueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    continueButton.setAlpha(0);
     continueButton.setAction(flexButtonCallback);
-    continueButton.setPosition(92, 178, 119, 50);
+    continueButton.setPosition(99, 180, 128, 41);
     add(continueButton);
 
-    quitButton.setBoxWithBorderPosition(0, 0, 81, 50);
+    quitButton.setBoxWithBorderPosition(0, 0, 93, 42);
     quitButton.setBorderSize(5);
     quitButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    quitButton.setAlpha(0);
     quitButton.setAction(flexButtonCallback);
-    quitButton.setPosition(205, 120, 81, 50);
+    quitButton.setPosition(190, 128, 93, 42);
     add(quitButton);
 
-    tryAgainButton.setBoxWithBorderPosition(0, 0, 81, 50);
+    tryAgainButton.setBoxWithBorderPosition(0, 0, 130, 42);
     tryAgainButton.setBorderSize(5);
     tryAgainButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    tryAgainButton.setAlpha(0);
     tryAgainButton.setAction(flexButtonCallback);
-    tryAgainButton.setPosition(31, 120, 81, 50);
+    tryAgainButton.setPosition(41, 128, 130, 42);
     add(tryAgainButton);
 }
 
