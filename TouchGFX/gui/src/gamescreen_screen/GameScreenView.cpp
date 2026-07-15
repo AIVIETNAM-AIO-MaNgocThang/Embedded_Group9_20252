@@ -147,7 +147,7 @@ void GameScreenView::spawnObstacle()
         {
             obstacles[i].img.setXY(320, 140); // chỉnh Y theo chiều cao ảnh obstacle thật
             obstacles[i].img.setVisible(true);
-            obstacles[i].active = true;
+            obstacles[i].active = false;
             invalidate();
             break;
         }
@@ -193,13 +193,9 @@ void GameScreenView::spawnPlatform()
         if (!platforms[i].active)
         {
             platforms[i].img.setXY(250, 120);
-
             platforms[i].img.setVisible(true);
-
             platforms[i].active = true;
-
             platforms[i].img.invalidate();
-
             break;
         }
     }
@@ -239,14 +235,30 @@ bool GameScreenView::checkPlatformLanding(
     Platform& platform
 )
 {
+    // ===== Hitbox platform =====
+    const int16_t PLATFORM_TOP_OFFSET = 8;
+    const int16_t PLATFORM_REAL_HEIGHT = 8;
 
-    // Lấy các thông số
+    // ===== Tọa độ player =====
     int16_t playerLeft =
         player.getX();
 
     int16_t playerRight =
         player.getX() + player.getWidth();
 
+    int16_t previousPlayerTop =
+        previousPlayerY;
+
+    int16_t previousPlayerBottom =
+        previousPlayerY + player.getHeight();
+
+    int16_t currentPlayerTop =
+        player.getY();
+
+    int16_t currentPlayerBottom =
+        player.getY() + player.getHeight();
+
+    // ===== Tọa độ platform =====
     int16_t platformLeft =
         platform.img.getX();
 
@@ -254,7 +266,15 @@ bool GameScreenView::checkPlatformLanding(
         platform.img.getX() +
         platform.img.getWidth();
 
-    // Kiểm tra overlap theo chiều ngang
+    int16_t platformTop =
+        platform.img.getY() +
+        PLATFORM_TOP_OFFSET;
+
+    int16_t platformBottom =
+        platformTop +
+        PLATFORM_REAL_HEIGHT;
+
+    // ===== Kiểm tra overlap chiều ngang =====
     bool horizontalOverlap =
         playerRight > platformLeft &&
         playerLeft < platformRight;
@@ -264,59 +284,41 @@ bool GameScreenView::checkPlatformLanding(
         return false;
     }
 
-    int16_t previousPlayerTop =
-            previousPlayerY;
+    // ===== Player đang rơi xuống =====
+    if (playerVelY > 0)
+    {
+        if (previousPlayerBottom <= platformTop &&
+            currentPlayerBottom >= platformTop)
+        {
+            player.moveTo(
+                player.getX(),
+                platformTop - player.getHeight()
+            );
 
-	int16_t previousPlayerBottom =
-		previousPlayerY + player.getHeight();
+            playerVelY = 0;
+            isJumping = false;
 
-	int16_t currentPlayerTop =
-		player.getY();
+            return true;
+        }
+    }
 
-	int16_t currentPlayerBottom =
-		player.getY() + player.getHeight();
+    // ===== Player đang nhảy lên =====
+    if (playerVelY < 0)
+    {
+        if (previousPlayerTop >= platformBottom &&
+            currentPlayerTop <= platformBottom)
+        {
+            player.moveTo(
+                player.getX(),
+                platformBottom
+            );
 
-	int16_t platformTop =
-		platform.img.getY();
+            playerVelY = 0;
 
-	int16_t platformBottom =
-		platform.img.getY() +
-		platform.img.getHeight();
+            return true;
+        }
+    }
 
-	// ===== Player đang rơi xuống =====
-	if (playerVelY > 0)
-	{
-		if (previousPlayerBottom <= platformTop &&
-			currentPlayerBottom >= platformTop)
-		{
-			player.moveTo(
-				player.getX(),
-				platformTop - player.getHeight()
-			);
-
-			playerVelY = 0;
-			isJumping = false;
-
-			return true;
-		}
-	}
-
-	// ===== Player đang nhảy lên =====
-	if (playerVelY < 0)
-	{
-		if (previousPlayerTop >= platformBottom &&
-			currentPlayerTop <= platformBottom)
-		{
-			player.moveTo(
-				player.getX(),
-				platformBottom
-			);
-
-			playerVelY = 0;
-
-			return true;
-		}
-	}
     return false;
 }
 
