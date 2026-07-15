@@ -111,6 +111,7 @@
             "Name": "pauseOverlay",
             "Width": 320,
             "Height": 240,
+            "Visible": false,
             "Components": [
               {
                 "Type": "Image",

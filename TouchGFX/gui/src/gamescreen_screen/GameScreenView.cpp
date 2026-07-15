@@ -12,11 +12,17 @@ GameScreenView::GameScreenView()
 	  quitButtonClickedCallback(this, &GameScreenView::quitButtonClicked),
 	  isPaused(false),
 	  ignoreNextClick(false),
-	  gameOverTriggered(false)
+	  gameOverTriggered(false),
+	  previousPlayerY(140)
 {
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
         obstacles[i].active = false;
+    }
+
+    for (int i = 0; i < MAX_PLATFORMS; i++)
+    {
+        platforms[i].active = false;
     }
 }
 
@@ -34,18 +40,29 @@ void GameScreenView::setupScreen()
     add(bg2);
 
     // --- Nhân vật ---
-    player.setBitmap(Bitmap(10));
+    player.setBitmap(Bitmap(12));
     player.setXY(96, 140);
     add(player);
 
     // --- Obstacle: add sẵn vào tree nhưng ẩn, kích hoạt khi spawn ---
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
-        obstacles[i].img.setBitmap(Bitmap(3)); // TODO: đổi tên đúng khi import ảnh
+        obstacles[i].img.setBitmap(Bitmap(9)); // TODO: đổi tên đúng khi import ảnh
         obstacles[i].img.setVisible(false);
         add(obstacles[i].img);
     }
 
+    // ===== Platform =====
+    for (int i = 0; i < MAX_PLATFORMS; i++)
+    {
+        platforms[i].img.setBitmap(Bitmap(11)); // đổi ID ảnh platform
+        platforms[i].img.setVisible(false);
+        platforms[i].active = false;
+
+        add(platforms[i].img);
+    }
+
+    previousPlayerY = player.getY();
     // --- Pause button ---
     remove(pauseButton);
     add(pauseButton);
@@ -68,6 +85,7 @@ void GameScreenView::setupScreen()
     // --- Quit button ---
     quitButton.setAction(quitButtonClickedCallback);
     invalidate();
+
 }
 
 void GameScreenView::tearDownScreen()
@@ -89,8 +107,11 @@ void GameScreenView::handleTickEvent()
     if (bg1.getX() <= -BG_WIDTH) bg1.moveTo(bg2.getX() + BG_WIDTH, bg1.getY());
     if (bg2.getX() <= -BG_WIDTH) bg2.moveTo(bg1.getX() + BG_WIDTH, bg2.getY());
 
-    // ===== Vật lý nhân vật (nhảy/rơi) =====
+    // ===== Vật lý nhân vật (nhảy/rơi) + Platform =====
+    previousPlayerY = player.getY();
+
     playerVelY += GRAVITY;
+
     int16_t newY = player.getY() + (int16_t)playerVelY;
 
     if (newY >= 140)
@@ -99,16 +120,22 @@ void GameScreenView::handleTickEvent()
         playerVelY = 0;
         isJumping = false;
     }
+
     player.moveTo(player.getX(), newY);
 
     // ===== Spawn & update obstacle =====
     spawnTimer++;
+
     if (spawnTimer >= spawnInterval)
     {
         spawnObstacle();
+        spawnPlatform();
+
         spawnTimer = 0;
     }
+
     updateObstacles();
+    updatePlatforms();
 }
 
 // Tạo vật cản
@@ -156,6 +183,141 @@ bool GameScreenView::checkCollision(const Image& a, const Image& b)
     Rect ra(a.getX(), a.getY(), a.getWidth(), a.getHeight());
     Rect rb(b.getX(), b.getY(), b.getWidth(), b.getHeight());
     return ra.intersect(rb);
+}
+
+// Tạo các phiến nhảy
+void GameScreenView::spawnPlatform()
+{
+    for (int i = 0; i < MAX_PLATFORMS; i++)
+    {
+        if (!platforms[i].active)
+        {
+            platforms[i].img.setXY(250, 120);
+
+            platforms[i].img.setVisible(true);
+
+            platforms[i].active = true;
+
+            platforms[i].img.invalidate();
+
+            break;
+        }
+    }
+}
+
+void GameScreenView::updatePlatforms()
+{
+    for (int i = 0; i < MAX_PLATFORMS; i++)
+    {
+        if (!platforms[i].active)
+        {
+            continue;
+        }
+
+        Platform& platform = platforms[i];
+
+        // Di chuyển platform sang trái
+        platform.img.moveTo(
+            platform.img.getX() - SCROLL_SPEED,
+            platform.img.getY()
+        );
+
+        // Kiểm tra player đáp xuống
+        checkPlatformLanding(platform);
+
+        // Platform ra màn hình
+        if (platform.img.getX() <
+            -(int16_t)platform.img.getWidth())
+        {
+            platform.img.setVisible(false);
+            platform.active = false;
+        }
+    }
+}
+
+bool GameScreenView::checkPlatformLanding(
+    Platform& platform
+)
+{
+
+    // Lấy các thông số
+    int16_t playerLeft =
+        player.getX();
+
+    int16_t playerRight =
+        player.getX() + player.getWidth();
+
+    int16_t platformLeft =
+        platform.img.getX();
+
+    int16_t platformRight =
+        platform.img.getX() +
+        platform.img.getWidth();
+
+    // Kiểm tra overlap theo chiều ngang
+    bool horizontalOverlap =
+        playerRight > platformLeft &&
+        playerLeft < platformRight;
+
+    if (!horizontalOverlap)
+    {
+        return false;
+    }
+
+    int16_t previousPlayerTop =
+            previousPlayerY;
+
+	int16_t previousPlayerBottom =
+		previousPlayerY + player.getHeight();
+
+	int16_t currentPlayerTop =
+		player.getY();
+
+	int16_t currentPlayerBottom =
+		player.getY() + player.getHeight();
+
+	int16_t platformTop =
+		platform.img.getY();
+
+	int16_t platformBottom =
+		platform.img.getY() +
+		platform.img.getHeight();
+
+	// ===== Player đang rơi xuống =====
+	if (playerVelY > 0)
+	{
+		if (previousPlayerBottom <= platformTop &&
+			currentPlayerBottom >= platformTop)
+		{
+			player.moveTo(
+				player.getX(),
+				platformTop - player.getHeight()
+			);
+
+			playerVelY = 0;
+			isJumping = false;
+
+			return true;
+		}
+	}
+
+	// ===== Player đang nhảy lên =====
+	if (playerVelY < 0)
+	{
+		if (previousPlayerTop >= platformBottom &&
+			currentPlayerTop <= platformBottom)
+		{
+			player.moveTo(
+				player.getX(),
+				platformBottom
+			);
+
+			playerVelY = 0;
+
+			return true;
+		}
+	}
+    return false;
 }
 
 void GameScreenView::onPlayerHit()

@@ -71,6 +71,23 @@ protected:
     bool checkCollision(const Image& a, const Image& b);
     void onPlayerHit();
 
+    // ---- Platform ----
+    static const int MAX_PLATFORMS = 3;
+    struct Platform
+    {
+        touchgfx::Image img;
+        bool active;
+    };
+
+    Platform platforms[MAX_PLATFORMS];
+
+    // Platform mà player đang đứng
+    Platform* currentPlatform;
+
+    void spawnPlatform();
+    void updatePlatforms();
+    bool checkPlatformLanding(Platform& platform);
+    int16_t previousPlayerY;
 public:
     virtual void handleClickEvent(const touchgfx::ClickEvent& evt); // để nhảy khi chạm màn hình
 };

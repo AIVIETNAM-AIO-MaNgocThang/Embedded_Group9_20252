@@ -14,25 +14,28 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:27:18:virtual void GameScreenViewBase::function1()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:73:6:virtual void GameScreenView::tearDownScreen()	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:91:6:virtual void GameScreenView::tearDownScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = GameScreenView; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = GameScreenView; T1 = const touchgfx::AbstractButtonContainer&]	3
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:192:6:void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer&)	1
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:200:6:void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:354:6:void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:362:6:void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer&)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:210:6:void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer&)	1
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:215:6:void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:372:6:void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:377:6:void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer&)	1
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:GameScreenView::~GameScreenView()	1
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:virtual GameScreenView::~GameScreenView()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:4:1:GameScreenView::GameScreenView()	2
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:115:6:void GameScreenView::spawnObstacle()	3
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:153:6:bool GameScreenView::checkCollision(const touchgfx::Image&, const touchgfx::Image&)	4
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:161:6:void GameScreenView::onPlayerHit()	2
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:130:6:void GameScreenView::updateObstacles()	6
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:78:6:virtual void GameScreenView::handleTickEvent()	6
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:23:6:virtual void GameScreenView::setupScreen()	2
-C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:173:6:virtual void GameScreenView::handleClickEvent(const touchgfx::ClickEvent&)	5
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:4:1:GameScreenView::GameScreenView()	3
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:142:6:void GameScreenView::spawnObstacle()	3
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:180:6:bool GameScreenView::checkCollision(const touchgfx::Image&, const touchgfx::Image&)	4
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:189:6:void GameScreenView::spawnPlatform()	4
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:238:6:bool GameScreenView::checkPlatformLanding(Platform&)	9
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:208:6:void GameScreenView::updatePlatforms()	4
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:323:6:void GameScreenView::onPlayerHit()	2
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:157:6:void GameScreenView::updateObstacles()	6
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:96:6:virtual void GameScreenView::handleTickEvent()	6
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:29:6:virtual void GameScreenView::setupScreen()	3
+C:/TouchGFXProjects/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:335:6:virtual void GameScreenView::handleClickEvent(const touchgfx::ClickEvent&)	5

@@ -515,9 +515,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_menuImage.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_obstacle_spike_silver_16x16.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_obstacle_spike_silver_16x16.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_pause_screen_320x240.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_pause_screen_320x240.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_platform_slab_16x16.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_platform_slab_16x16.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_playerImage.cpp</name>
