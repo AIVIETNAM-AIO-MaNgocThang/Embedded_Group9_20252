@@ -1,5 +1,5 @@
 Application/User/generated/GameScreenViewBase.o: \
- C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
+ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -72,7 +72,8 @@ Application/User/generated/GameScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp
+ ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -146,3 +147,4 @@ Application/User/generated/GameScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

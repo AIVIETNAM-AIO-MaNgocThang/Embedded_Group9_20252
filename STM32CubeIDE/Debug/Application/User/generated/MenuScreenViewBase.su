@@ -23,8 +23,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<MenuScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:28:1:MenuScreenViewBase::~MenuScreenViewBase()	0	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:33:6:virtual void MenuScreenViewBase::setupScreen()	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:28:1:MenuScreenViewBase::~MenuScreenViewBase()	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:33:6:virtual void MenuScreenViewBase::setupScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = MenuScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = MenuScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -34,14 +34,14 @@ C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<MenuScreenPresenter>::~View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<MenuScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:28:1:virtual MenuScreenViewBase::~MenuScreenViewBase()	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:28:1:virtual MenuScreenViewBase::~MenuScreenViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:38:6:void MenuScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:38:6:void MenuScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:8:1:MenuScreenViewBase::MenuScreenViewBase()	48	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/menuscreen_screen/MenuScreenViewBase.cpp:8:1:MenuScreenViewBase::MenuScreenViewBase()	48	static

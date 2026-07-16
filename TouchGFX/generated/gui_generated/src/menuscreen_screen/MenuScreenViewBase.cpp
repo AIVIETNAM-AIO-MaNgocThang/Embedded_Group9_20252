@@ -12,9 +12,9 @@ MenuScreenViewBase::MenuScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    image1.setXY(0, 0);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_MENUIMAGE_ID));
-    add(image1);
+    menuImage.setXY(0, 0);
+    menuImage.setBitmap(touchgfx::Bitmap(BITMAP_MENUIMAGE_ID));
+    add(menuImage);
 
     playButton.setBoxWithBorderPosition(0, 0, 245, 50);
     playButton.setBorderSize(5);

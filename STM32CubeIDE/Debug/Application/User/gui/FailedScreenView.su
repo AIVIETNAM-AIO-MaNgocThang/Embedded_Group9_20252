@@ -1,8 +1,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:13:6:virtual void FailedScreenView::tearDownScreen()	0	static
-../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:11:13:FailedScreenView::~FailedScreenView()	8	static
-../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:11:13:virtual FailedScreenView::~FailedScreenView()	8	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:3:1:FailedScreenView::FailedScreenView()	8	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:8:6:virtual void FailedScreenView::setupScreen()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<FailedScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:57:6:virtual void FailedScreenView::tearDownScreen()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = FailedScreenView; T1 = const touchgfx::AbstractButtonContainer&]	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = FailedScreenView; T1 = const touchgfx::AbstractButtonContainer&]	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<FailedScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:62:6:void FailedScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer&)	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:69:6:void FailedScreenView::returnMenuButtonClicked(const touchgfx::AbstractButtonContainer&)	8	static
+../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:12:13:FailedScreenView::~FailedScreenView()	8	static
+../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:12:13:virtual FailedScreenView::~FailedScreenView()	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:4:1:FailedScreenView::FailedScreenView()	8	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp:11:6:virtual void FailedScreenView::setupScreen()	16	static

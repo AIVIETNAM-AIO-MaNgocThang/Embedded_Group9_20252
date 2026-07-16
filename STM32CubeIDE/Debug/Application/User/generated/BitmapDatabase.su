@@ -1,2 +1,2 @@
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/images/src/BitmapDatabase.cpp:45:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
-C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/generated/images/src/BitmapDatabase.cpp:50:10:uint16_t BitmapDatabase::getInstanceSize()	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/images/src/BitmapDatabase.cpp:45:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/images/src/BitmapDatabase.cpp:50:10:uint16_t BitmapDatabase::getInstanceSize()	0	static

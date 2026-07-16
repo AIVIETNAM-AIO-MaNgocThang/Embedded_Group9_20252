@@ -5,10 +5,44 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
-    <TextGroup Id="Unsorted" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_D18B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DMNS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_582M" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8O5C" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YHID" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LZY2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UVLU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RNM4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7EMY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8HN8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EJQ8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;*&gt;</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789 s" WildcardCharacterRanges="0x0030-0x0039" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

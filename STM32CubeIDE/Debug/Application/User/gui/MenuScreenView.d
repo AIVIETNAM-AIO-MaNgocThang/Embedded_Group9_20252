@@ -1,5 +1,5 @@
 Application/User/gui/MenuScreenView.o: \
- C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/menuscreen_screen/MenuScreenView.cpp \
+ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/menuscreen_screen/MenuScreenView.cpp \
  ../../TouchGFX/gui/include/gui/menuscreen_screen/MenuScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

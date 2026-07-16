@@ -1,5 +1,5 @@
 Application/User/stm32f4xx_hal_msp.o: \
- C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/Core/Src/stm32f4xx_hal_msp.c \
+ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/Core/Src/stm32f4xx_hal_msp.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \

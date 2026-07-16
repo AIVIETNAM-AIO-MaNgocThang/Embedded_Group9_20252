@@ -6,7 +6,7 @@
         "Components": [
           {
             "Type": "Image",
-            "Name": "image1",
+            "Name": "menuImage",
             "Width": 320,
             "Height": 240,
             "RelativeFilename": "menuImage.png"
@@ -111,11 +111,10 @@
             "Name": "pauseOverlay",
             "Width": 320,
             "Height": 240,
-            "Visible": false,
             "Components": [
               {
                 "Type": "Image",
-                "Name": "image1",
+                "Name": "pauseImage",
                 "Width": 320,
                 "Height": 240,
                 "RelativeFilename": "pause_screen_320x240.png"
@@ -233,6 +232,66 @@
                     }
                   }
                 ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "timeTextArea",
+                "X": 83,
+                "Y": 100,
+                "Width": 59,
+                "Height": 14,
+                "TextId": "__SingleUse_8HN8",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "progressTextArea",
+                "X": 243,
+                "Y": 100,
+                "Width": 59,
+                "Height": 14,
+                "TextId": "__SingleUse_RNM4",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "jumpsTextArea",
+                "X": 227,
+                "Y": 75,
+                "Width": 59,
+                "Height": 14,
+                "TextId": "__SingleUse_7EMY",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "attemptsTextArea",
+                "X": 117,
+                "Y": 75,
+                "Width": 59,
+                "Height": 14,
+                "TextId": "__SingleUse_EJQ8",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               }
             ]
           }
@@ -360,6 +419,66 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeTextArea",
+            "X": 87,
+            "Y": 116,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_LZY2",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "progressTextArea",
+            "X": 242,
+            "Y": 116,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_8O5C",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "jumpsTextArea",
+            "X": 226,
+            "Y": 86,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_YHID",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "attemptsTextArea",
+            "X": 117,
+            "Y": 86,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_UVLU",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
@@ -470,10 +589,55 @@
           },
           {
             "Type": "Image",
-            "Name": "image1",
+            "Name": "clearImage",
             "Width": 320,
             "Height": 240,
             "RelativeFilename": "result_clear_320x240.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeTextArea",
+            "X": 84,
+            "Y": 120,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_D18B",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "jumpsTextArea",
+            "X": 230,
+            "Y": 86,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_DMNS",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "attemptsTextArea",
+            "X": 117,
+            "Y": 86,
+            "Width": 59,
+            "Height": 14,
+            "TextId": "__SingleUse_582M",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
@@ -562,6 +726,6 @@
       "VectorFonts"
     ]
   },
-  "Version": "4.26.1",
+  "Version": "4.24.1",
   "CreatedBy": "4.24.1"
 }

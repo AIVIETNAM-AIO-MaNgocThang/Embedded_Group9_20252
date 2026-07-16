@@ -4,6 +4,7 @@
 #include <gui_generated/clearscreen_screen/ClearScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 ClearScreenViewBase::ClearScreenViewBase() :
     flexButtonCallback(this, &ClearScreenViewBase::flexButtonCallbackHandler)
@@ -28,9 +29,36 @@ ClearScreenViewBase::ClearScreenViewBase() :
     returnMenuButton.setPosition(186, 163, 88, 47);
     add(returnMenuButton);
 
-    image1.setXY(0, 0);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_RESULT_CLEAR_320X240_ID));
-    add(image1);
+    clearImage.setXY(0, 0);
+    clearImage.setBitmap(touchgfx::Bitmap(BITMAP_RESULT_CLEAR_320X240_ID));
+    add(clearImage);
+
+    timeTextArea.setXY(84, 120);
+    timeTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    timeTextArea.setLinespacing(0);
+    timeTextAreaBuffer[0] = 0;
+    timeTextArea.setWildcard(timeTextAreaBuffer);
+    timeTextArea.resizeToCurrentText();
+    timeTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_D18B));
+    add(timeTextArea);
+
+    jumpsTextArea.setXY(230, 86);
+    jumpsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    jumpsTextArea.setLinespacing(0);
+    jumpsTextAreaBuffer[0] = 0;
+    jumpsTextArea.setWildcard(jumpsTextAreaBuffer);
+    jumpsTextArea.resizeToCurrentText();
+    jumpsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DMNS));
+    add(jumpsTextArea);
+
+    attemptsTextArea.setXY(117, 86);
+    attemptsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    attemptsTextArea.setLinespacing(0);
+    attemptsTextAreaBuffer[0] = 0;
+    attemptsTextArea.setWildcard(attemptsTextAreaBuffer);
+    attemptsTextArea.resizeToCurrentText();
+    attemptsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_582M));
+    add(attemptsTextArea);
 }
 
 ClearScreenViewBase::~ClearScreenViewBase()

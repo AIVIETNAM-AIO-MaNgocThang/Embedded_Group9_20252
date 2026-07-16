@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class FailedScreenViewBase : public touchgfx::View<FailedScreenPresenter>
 {
@@ -30,6 +31,22 @@ protected:
     touchgfx::Image backgroundImage;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  tryAgainButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  returnMenuButton;
+    touchgfx::TextAreaWithOneWildcard timeTextArea;
+    touchgfx::TextAreaWithOneWildcard progressTextArea;
+    touchgfx::TextAreaWithOneWildcard jumpsTextArea;
+    touchgfx::TextAreaWithOneWildcard attemptsTextArea;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TIMETEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar timeTextAreaBuffer[TIMETEXTAREA_SIZE];
+    static const uint16_t PROGRESSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar progressTextAreaBuffer[PROGRESSTEXTAREA_SIZE];
+    static const uint16_t JUMPSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar jumpsTextAreaBuffer[JUMPSTEXTAREA_SIZE];
+    static const uint16_t ATTEMPTSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar attemptsTextAreaBuffer[ATTEMPTSTEXTAREA_SIZE];
 
 private:
 

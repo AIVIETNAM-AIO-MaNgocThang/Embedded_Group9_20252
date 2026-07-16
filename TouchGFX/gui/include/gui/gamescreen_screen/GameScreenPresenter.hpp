@@ -25,6 +25,19 @@ public:
      */
     virtual void deactivate();
 
+    // ===== Game Statistics =====
+    void increaseAttempt();
+    void increaseJump();
+    void increasePlayTime();
+    void increaseDistance(int16_t delta);
+    void resetAttempt();
+    void resetGameStats();
+
+    uint32_t getAttemptCount() const;
+    uint32_t getJumpCount() const;
+    uint32_t getPlayTime() const;
+    uint32_t getDistance() const;
+
     virtual ~GameScreenPresenter() {}
 
 private:

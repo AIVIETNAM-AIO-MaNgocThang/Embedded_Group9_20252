@@ -1,5 +1,5 @@
 Application/User/gui/FailedScreenView.o: \
- C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp \
+ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenView.cpp \
  ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -69,7 +69,8 @@ Application/User/gui/FailedScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -140,3 +141,4 @@ Application/User/gui/FailedScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

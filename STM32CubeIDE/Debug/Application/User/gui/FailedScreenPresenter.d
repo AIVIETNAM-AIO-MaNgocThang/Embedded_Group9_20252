@@ -1,5 +1,5 @@
 Application/User/gui/FailedScreenPresenter.o: \
- C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp \
+ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

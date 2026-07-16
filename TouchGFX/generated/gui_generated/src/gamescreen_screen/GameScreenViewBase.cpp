@@ -4,6 +4,7 @@
 #include <gui_generated/gamescreen_screen/GameScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 GameScreenViewBase::GameScreenViewBase() :
     flexButtonCallback(this, &GameScreenViewBase::flexButtonCallbackHandler)
@@ -26,10 +27,9 @@ GameScreenViewBase::GameScreenViewBase() :
     add(pauseButton);
 
     pauseOverlay.setPosition(0, 0, 320, 240);
-    pauseOverlay.setVisible(false);
-    image1.setXY(0, 0);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_PAUSE_SCREEN_320X240_ID));
-    pauseOverlay.add(image1);
+    pauseImage.setXY(0, 0);
+    pauseImage.setBitmap(touchgfx::Bitmap(BITMAP_PAUSE_SCREEN_320X240_ID));
+    pauseOverlay.add(pauseImage);
 
     continueButton.setBoxWithBorderPosition(0, 0, 128, 41);
     continueButton.setBorderSize(5);
@@ -54,6 +54,42 @@ GameScreenViewBase::GameScreenViewBase() :
     tryAgainButton.setAction(flexButtonCallback);
     tryAgainButton.setPosition(41, 128, 130, 42);
     pauseOverlay.add(tryAgainButton);
+
+    timeTextArea.setXY(83, 100);
+    timeTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    timeTextArea.setLinespacing(0);
+    timeTextAreaBuffer[0] = 0;
+    timeTextArea.setWildcard(timeTextAreaBuffer);
+    timeTextArea.resizeToCurrentText();
+    timeTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8HN8));
+    pauseOverlay.add(timeTextArea);
+
+    progressTextArea.setXY(243, 100);
+    progressTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    progressTextArea.setLinespacing(0);
+    progressTextAreaBuffer[0] = 0;
+    progressTextArea.setWildcard(progressTextAreaBuffer);
+    progressTextArea.resizeToCurrentText();
+    progressTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RNM4));
+    pauseOverlay.add(progressTextArea);
+
+    jumpsTextArea.setXY(227, 75);
+    jumpsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    jumpsTextArea.setLinespacing(0);
+    jumpsTextAreaBuffer[0] = 0;
+    jumpsTextArea.setWildcard(jumpsTextAreaBuffer);
+    jumpsTextArea.resizeToCurrentText();
+    jumpsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7EMY));
+    pauseOverlay.add(jumpsTextArea);
+
+    attemptsTextArea.setXY(117, 75);
+    attemptsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    attemptsTextArea.setLinespacing(0);
+    attemptsTextAreaBuffer[0] = 0;
+    attemptsTextArea.setWildcard(attemptsTextAreaBuffer);
+    attemptsTextArea.resizeToCurrentText();
+    attemptsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EJQ8));
+    pauseOverlay.add(attemptsTextArea);
 
     add(pauseOverlay);
 }

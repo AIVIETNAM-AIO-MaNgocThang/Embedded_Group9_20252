@@ -27,6 +27,13 @@ public:
 
     virtual ~ClearScreenPresenter() {}
 
+    // Lấy thông tin
+    uint32_t getAttemptCount() const;
+    uint32_t getJumpCount() const;
+    uint32_t getPlayTime() const;
+
+	void resetAttempt();
+	void resetGameStats();
 private:
     ClearScreenPresenter();
 

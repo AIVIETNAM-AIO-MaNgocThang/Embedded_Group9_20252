@@ -28,7 +28,7 @@ protected:
     // ---- Nhân vật ----
     Image player;
     static const int16_t PLAYER_SIZE = 16;
-    static const int16_t GROUND_Y    = SCREEN_HEIGHT - PLAYER_SIZE - 20; // 20 = mặt đất cao 20px, chỉnh theo ý bạn
+    static const int16_t GROUND_Y    = 140;
     float playerVelY;
     bool  isJumping;
     static constexpr float GRAVITY      = 0.6f;
@@ -56,7 +56,7 @@ protected:
     // ---- Game Over guard ----
     bool gameOverTriggered;
     // ---- Vật cản ----
-    static const int16_t MAX_OBSTACLES = 5;
+    static const int MAX_OBSTACLES = 5;
     struct Obstacle
     {
         Image img;
@@ -71,8 +71,25 @@ protected:
     bool checkCollision(const Image& a, const Image& b);
     void onPlayerHit();
 
+    // Trong GameScreenView.hpp
+    static const int MAX_STEPS = 5;
+    static const int MAX_STEP_HEIGHT = 4; // số ô tối đa chồng lên nhau
+
+    struct Step
+    {
+        Image blocks[MAX_STEP_HEIGHT]; // mỗi ô 16x16, vẽ chồng lên nhau
+        uint8_t height;                // số ô thực tế (1..MAX_STEP_HEIGHT)
+        bool active;
+    };
+
+    Step steps[MAX_STEPS];
+
+    void spawnStep(uint8_t h);
+    bool checkStepCollision(Step& step);
+    void updateSteps();
+
     // ---- Platform ----
-    static const int16_t MAX_PLATFORMS = 3;
+    static const int MAX_PLATFORMS = 3;
     struct Platform
     {
         touchgfx::Image img;
@@ -87,26 +104,10 @@ protected:
     void spawnPlatform();
     void updatePlatforms();
     bool checkPlatformLanding(Platform& platform);
-
-    // ---- Step ----
-    static const int16_t MAX_STEPS = 5;
-    struct Step
-    {
-        Image img;
-        bool  active;
-        uint8_t height;
-    };
-    Step steps[MAX_STEPS];
-
-    Step* currentStep = nullptr;
-    bool isOnStep = false;
-
-    void spawnStep();
-    void updateSteps();
-    bool checkStepCollision(Step& step);
-    bool checkStepLanding(Step& step);
-
     int16_t previousPlayerY;
+
+    // Đếm tick
+    int16_t tickCounter;
 public:
     virtual void handleClickEvent(const touchgfx::ClickEvent& evt); // để nhảy khi chạm màn hình
 };

@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "level.h"
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
 
@@ -183,24 +182,7 @@ int main(void)
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
-  // Biến toàn cục lưu level hiện tại
-  Level g_currentLevel;
 
-  int main() {
-      // ... khởi tạo HAL, FATFS, TouchGFX ...
-
-      // Đọc file level mặc định
-      if (LoadLevel("level1.gdl", &g_currentLevel)) {
-          // Thành công
-      } else {
-          // Nếu lỗi, tạo level mặc định (fallback)
-          g_currentLevel.mapLength = 50;
-          g_currentLevel.objCount = 0; // level rỗng
-          // Hoặc có thể gán một vài object mặc định để test
-      }
-
-      // ... chạy ứng dụng ...
-  }
   /* USER CODE END 2 */
 
   /* Init scheduler */
