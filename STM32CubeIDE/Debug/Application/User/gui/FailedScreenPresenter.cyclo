@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:FailedScreenPresenter::~FailedScreenPresenter()	1
+C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:10:6:virtual void FailedScreenPresenter::activate()	1
+../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:virtual FailedScreenPresenter::~FailedScreenPresenter()	1
+../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:28:13:virtual void* FailedScreenPresenter::_ZThn4_N21FailedScreenPresenterD1Ev()	1
+C:/Users/Admin/Downloads/He++nhung/Embedded_Group9_20252/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp:4:1:FailedScreenPresenter::FailedScreenPresenter(FailedScreenView&)	1
