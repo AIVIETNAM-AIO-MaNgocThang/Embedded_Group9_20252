@@ -88,6 +88,9 @@ protected:
     void updatePlatforms();
     bool checkPlatformLanding(Platform& platform);
     int16_t previousPlayerY;
+
+    // Đếm tick
+    int16_t tickCounter;
 public:
     virtual void handleClickEvent(const touchgfx::ClickEvent& evt); // để nhảy khi chạm màn hình
 };

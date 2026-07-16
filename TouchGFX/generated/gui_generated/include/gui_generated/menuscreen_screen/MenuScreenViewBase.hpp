@@ -27,7 +27,7 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Image image1;
+    touchgfx::Image menuImage;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  playButton;
 
 private:

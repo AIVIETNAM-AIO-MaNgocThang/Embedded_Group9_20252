@@ -13,6 +13,7 @@
 #include <touchgfx/mixins/MoveAnimator.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class GameScreenViewBase : public touchgfx::View<GameScreenPresenter>
 {
@@ -42,10 +43,26 @@ protected:
     touchgfx::Image playerImage;
     touchgfx::IconButtonStyle< touchgfx::TouchButtonTrigger >  pauseButton;
     touchgfx::Container pauseOverlay;
-    touchgfx::Image image1;
+    touchgfx::Image pauseImage;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  continueButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  quitButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  tryAgainButton;
+    touchgfx::TextAreaWithOneWildcard timeTextArea;
+    touchgfx::TextAreaWithOneWildcard progressTextArea;
+    touchgfx::TextAreaWithOneWildcard jumpsTextArea;
+    touchgfx::TextAreaWithOneWildcard attemptsTextArea;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TIMETEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar timeTextAreaBuffer[TIMETEXTAREA_SIZE];
+    static const uint16_t PROGRESSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar progressTextAreaBuffer[PROGRESSTEXTAREA_SIZE];
+    static const uint16_t JUMPSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar jumpsTextAreaBuffer[JUMPSTEXTAREA_SIZE];
+    static const uint16_t ATTEMPTSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar attemptsTextAreaBuffer[ATTEMPTSTEXTAREA_SIZE];
 
 private:
 

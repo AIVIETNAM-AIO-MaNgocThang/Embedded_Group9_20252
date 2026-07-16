@@ -13,7 +13,8 @@ GameScreenView::GameScreenView()
 	  isPaused(false),
 	  ignoreNextClick(false),
 	  gameOverTriggered(false),
-	  previousPlayerY(140)
+	  previousPlayerY(140),
+	  tickCounter(0)
 {
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
@@ -40,14 +41,14 @@ void GameScreenView::setupScreen()
     add(bg2);
 
     // --- Nhân vật ---
-    player.setBitmap(Bitmap(12));
+    player.setBitmap(Bitmap(13));
     player.setXY(96, 140);
     add(player);
 
     // --- Obstacle: add sẵn vào tree nhưng ẩn, kích hoạt khi spawn ---
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
-        obstacles[i].img.setBitmap(Bitmap(9)); // TODO: đổi tên đúng khi import ảnh
+        obstacles[i].img.setBitmap(Bitmap(10)); // TODO: đổi tên đúng khi import ảnh
         obstacles[i].img.setVisible(false);
         add(obstacles[i].img);
     }
@@ -55,7 +56,7 @@ void GameScreenView::setupScreen()
     // ===== Platform =====
     for (int i = 0; i < MAX_PLATFORMS; i++)
     {
-        platforms[i].img.setBitmap(Bitmap(11)); // đổi ID ảnh platform
+        platforms[i].img.setBitmap(Bitmap(12)); // đổi ID ảnh platform
         platforms[i].img.setVisible(false);
         platforms[i].active = false;
 
@@ -100,9 +101,20 @@ void GameScreenView::handleTickEvent()
     // ===== Pause =====
     if (isPaused) return;
 
+    // ==== Time ====
+    tickCounter++;
+
+    if (tickCounter >= 60) // CHÚ Ý: FPS HIỆN TẠI ĐANG SET LÀ 60
+    {
+        tickCounter = 0;
+        presenter->increasePlayTime();
+    }
+
     // ===== Cuộn nền =====
     bg1.moveTo(bg1.getX() - SCROLL_SPEED, bg1.getY());
     bg2.moveTo(bg2.getX() - SCROLL_SPEED, bg2.getY());
+
+    presenter->increaseDistance(SCROLL_SPEED);
 
     if (bg1.getX() <= -BG_WIDTH) bg1.moveTo(bg2.getX() + BG_WIDTH, bg1.getY());
     if (bg2.getX() <= -BG_WIDTH) bg2.moveTo(bg1.getX() + BG_WIDTH, bg2.getY());
@@ -147,7 +159,7 @@ void GameScreenView::spawnObstacle()
         {
             obstacles[i].img.setXY(320, 140); // chỉnh Y theo chiều cao ảnh obstacle thật
             obstacles[i].img.setVisible(true);
-            obstacles[i].active = false;
+            obstacles[i].active = true;
             invalidate();
             break;
         }
@@ -348,6 +360,8 @@ void GameScreenView::handleClickEvent(const touchgfx::ClickEvent& evt)
     		}
     if (evt.getType() == ClickEvent::PRESSED && !isJumping)
     {
+    	presenter->increaseJump();
+
         playerVelY = JUMP_STRENGTH;
         isJumping = true;
     }
@@ -359,6 +373,38 @@ void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer&
 
     pauseOverlay.setVisible(true);
     pauseOverlay.invalidate();
+
+    Unicode::snprintf(
+		attemptsTextAreaBuffer,
+		ATTEMPTSTEXTAREA_SIZE,
+		"%d",
+		presenter->getAttemptCount());
+	attemptsTextArea.resizeToCurrentText();
+	attemptsTextArea.invalidate();
+
+	Unicode::snprintf(
+		jumpsTextAreaBuffer,
+		JUMPSTEXTAREA_SIZE,
+		"%d",
+		presenter->getJumpCount());
+	jumpsTextArea.resizeToCurrentText();
+	jumpsTextArea.invalidate();
+
+	Unicode::snprintf(
+		timeTextAreaBuffer,
+		TIMETEXTAREA_SIZE,
+		"%d s",
+		presenter->getPlayTime());
+	timeTextArea.resizeToCurrentText();
+	timeTextArea.invalidate();
+
+	Unicode::snprintf(
+		progressTextAreaBuffer,
+		PROGRESSTEXTAREA_SIZE,
+		"%d",
+		presenter->getDistance());
+	progressTextArea.resizeToCurrentText();
+	progressTextArea.invalidate();
 }
 
 void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer& src)
@@ -378,5 +424,7 @@ void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContain
 
 void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer& src)
 {
+	presenter->increaseAttempt();
+	presenter->resetGameStats();
 	application().gotoGameScreenScreenNoTransition();
 }

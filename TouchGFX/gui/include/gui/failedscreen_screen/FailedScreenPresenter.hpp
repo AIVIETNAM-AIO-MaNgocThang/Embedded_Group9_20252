@@ -27,6 +27,15 @@ public:
 
     virtual ~FailedScreenPresenter() {}
 
+    // Lấy thông số
+    uint32_t getAttemptCount() const;
+	uint32_t getJumpCount() const;
+	uint32_t getPlayTime() const;
+	uint32_t getDistance() const;
+
+	void resetAttempt();
+	void resetGameStats();
+	void increaseAttempt();
 private:
     FailedScreenPresenter();
 

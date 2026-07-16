@@ -4,6 +4,7 @@
 #include <gui_generated/failedscreen_screen/FailedScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 FailedScreenViewBase::FailedScreenViewBase() :
     flexButtonCallback(this, &FailedScreenViewBase::flexButtonCallbackHandler)
@@ -31,6 +32,42 @@ FailedScreenViewBase::FailedScreenViewBase() :
     returnMenuButton.setAction(flexButtonCallback);
     returnMenuButton.setPosition(186, 163, 88, 47);
     add(returnMenuButton);
+
+    timeTextArea.setXY(87, 116);
+    timeTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    timeTextArea.setLinespacing(0);
+    timeTextAreaBuffer[0] = 0;
+    timeTextArea.setWildcard(timeTextAreaBuffer);
+    timeTextArea.resizeToCurrentText();
+    timeTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LZY2));
+    add(timeTextArea);
+
+    progressTextArea.setXY(242, 116);
+    progressTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    progressTextArea.setLinespacing(0);
+    progressTextAreaBuffer[0] = 0;
+    progressTextArea.setWildcard(progressTextAreaBuffer);
+    progressTextArea.resizeToCurrentText();
+    progressTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8O5C));
+    add(progressTextArea);
+
+    jumpsTextArea.setXY(226, 86);
+    jumpsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    jumpsTextArea.setLinespacing(0);
+    jumpsTextAreaBuffer[0] = 0;
+    jumpsTextArea.setWildcard(jumpsTextAreaBuffer);
+    jumpsTextArea.resizeToCurrentText();
+    jumpsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YHID));
+    add(jumpsTextArea);
+
+    attemptsTextArea.setXY(117, 86);
+    attemptsTextArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    attemptsTextArea.setLinespacing(0);
+    attemptsTextAreaBuffer[0] = 0;
+    attemptsTextArea.setWildcard(attemptsTextAreaBuffer);
+    attemptsTextArea.resizeToCurrentText();
+    attemptsTextArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UVLU));
+    add(attemptsTextArea);
 }
 
 FailedScreenViewBase::~FailedScreenViewBase()

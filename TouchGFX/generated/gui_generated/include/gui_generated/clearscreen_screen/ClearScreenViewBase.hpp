@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class ClearScreenViewBase : public touchgfx::View<ClearScreenPresenter>
 {
@@ -29,7 +30,20 @@ protected:
     touchgfx::Box __background;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  tryAgainButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  returnMenuButton;
-    touchgfx::Image image1;
+    touchgfx::Image clearImage;
+    touchgfx::TextAreaWithOneWildcard timeTextArea;
+    touchgfx::TextAreaWithOneWildcard jumpsTextArea;
+    touchgfx::TextAreaWithOneWildcard attemptsTextArea;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TIMETEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar timeTextAreaBuffer[TIMETEXTAREA_SIZE];
+    static const uint16_t JUMPSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar jumpsTextAreaBuffer[JUMPSTEXTAREA_SIZE];
+    static const uint16_t ATTEMPTSTEXTAREA_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar attemptsTextAreaBuffer[ATTEMPTSTEXTAREA_SIZE];
 
 private:
 
