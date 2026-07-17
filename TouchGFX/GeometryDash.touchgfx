@@ -331,6 +331,17 @@
               "Type": "ActionCustom",
               "FunctionName": "function1"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ClearScreen"
+            }
           }
         ]
       },

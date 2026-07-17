@@ -288,6 +288,12 @@
     <ClCompile Include="..\..\generated\gui_generated\src\clearscreen_screen\ClearScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\clearscreen_screen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\level1.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\LevelLoader.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml">
@@ -765,6 +771,12 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\clearscreen_screen\ClearScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\clearscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\LevelData.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\LevelLoader.hpp">
+      <Filter>Header Files\gui\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

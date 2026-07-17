@@ -33,6 +33,8 @@
     <ClCompile Include="..\..\gui\src\clearscreen_screen\ClearScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\clearscreen_screen\ClearScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\clearscreen_screen\ClearScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\level1.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\LevelLoader.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -195,6 +197,8 @@
     <ClInclude Include="..\..\gui\include\gui\clearscreen_screen\ClearScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\clearscreen_screen\ClearScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\clearscreen_screen\ClearScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\LevelData.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\LevelLoader.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

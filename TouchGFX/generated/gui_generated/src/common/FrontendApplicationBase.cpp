@@ -97,3 +97,16 @@ void FrontendApplicationBase::gotoFailedScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<FailedScreenView, FailedScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// ClearScreen
+
+void FrontendApplicationBase::gotoClearScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoClearScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoClearScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<ClearScreenView, ClearScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}

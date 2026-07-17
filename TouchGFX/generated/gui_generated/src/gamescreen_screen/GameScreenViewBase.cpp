@@ -128,3 +128,15 @@ void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
         function1();
     }
 }
+
+void GameScreenViewBase::handleKeyEvent(uint8_t key)
+{
+    if(0 == key)
+    {
+        //Interaction2
+        //When hardware button 0 clicked change screen to ClearScreen
+        //Go to ClearScreen with no screen transition
+        application().gotoClearScreenScreenNoTransition();
+    
+    }
+}

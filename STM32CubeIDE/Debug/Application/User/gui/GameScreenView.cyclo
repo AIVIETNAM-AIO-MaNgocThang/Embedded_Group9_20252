@@ -11,34 +11,34 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:28:18:virtual void GameScreenViewBase::function1()	1
+../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:29:18:virtual void GameScreenViewBase::function1()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:108:6:virtual void GameScreenView::tearDownScreen()	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:115:6:virtual void GameScreenView::tearDownScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = GameScreenView; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = GameScreenView; T1 = const touchgfx::AbstractButtonContainer&]	3
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:539:6:void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:613:6:void GameScreenView::continueButtonClicked(const touchgfx::AbstractButtonContainer&)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<GameScreenView, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:549:6:void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer&)	1
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:499:6:void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer&)	1
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:554:6:void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer&)	1
-../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:GameScreenView::~GameScreenView()	3
-../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:virtual GameScreenView::~GameScreenView()	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:623:6:void GameScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:573:6:void GameScreenView::pauseButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:628:6:void GameScreenView::quitButtonClicked(const touchgfx::AbstractButtonContainer&)	1
+../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	3
+../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:virtual GameScreenView::~GameScreenView()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:4:1:GameScreenView::GameScreenView()	5
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:172:6:void GameScreenView::spawnObstacle()	3
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:210:6:bool GameScreenView::checkCollision(const touchgfx::Image&, const touchgfx::Image&)	4
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:219:6:void GameScreenView::spawnPlatform()	4
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:264:6:bool GameScreenView::checkPlatformLanding(Platform&)	9
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:234:6:void GameScreenView::updatePlatforms()	4
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:355:6:void GameScreenView::spawnStep(uint8_t)	5
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:466:6:void GameScreenView::onPlayerHit()	2
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:187:6:void GameScreenView::updateObstacles()	6
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:384:6:bool GameScreenView::checkStepCollision(Step&)	10
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:436:6:void GameScreenView::updateSteps()	6
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:113:6:virtual void GameScreenView::handleTickEvent()	10
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:30:6:virtual void GameScreenView::setupScreen()	6
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:478:6:virtual void GameScreenView::handleClickEvent(const touchgfx::ClickEvent&)	5
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:5:1:GameScreenView::GameScreenView()	7
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:237:6:void GameScreenView::spawnObstacle(int16_t, int16_t)	3
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:275:6:bool GameScreenView::checkCollision(const touchgfx::Image&, const touchgfx::Image&)	4
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:284:6:void GameScreenView::spawnPlatform(int16_t, int16_t)	3
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:329:6:bool GameScreenView::checkPlatformLanding(Platform&)	9
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:299:6:void GameScreenView::updatePlatforms()	4
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:420:6:void GameScreenView::spawnStep(int16_t, uint8_t)	5
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:531:6:void GameScreenView::onPlayerHit()	2
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:252:6:void GameScreenView::updateObstacles()	6
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:449:6:bool GameScreenView::checkStepCollision(Step&)	10
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:501:6:void GameScreenView::updateSteps()	6
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:543:6:void GameScreenView::onLevelClear()	2
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:120:6:virtual void GameScreenView::handleTickEvent()	14
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:31:6:virtual void GameScreenView::setupScreen()	6
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:552:6:virtual void GameScreenView::handleClickEvent(const touchgfx::ClickEvent&)	5

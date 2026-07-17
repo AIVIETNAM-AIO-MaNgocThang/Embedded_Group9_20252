@@ -33,6 +33,9 @@ public:
     // FailedScreen
     void gotoFailedScreenScreenNoTransition();
 
+    // ClearScreen
+    void gotoClearScreenScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -50,6 +53,9 @@ protected:
 
     // FailedScreen
     void gotoFailedScreenScreenNoTransitionImpl();
+
+    // ClearScreen
+    void gotoClearScreenScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

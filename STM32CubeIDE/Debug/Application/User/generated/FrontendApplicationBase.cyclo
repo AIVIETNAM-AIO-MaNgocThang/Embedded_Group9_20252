@@ -38,7 +38,9 @@ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/genera
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:66:6:void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionEast()	1
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:77:6:void FrontendApplicationBase::gotoGameScreenScreenNoTransition()	1
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:90:6:void FrontendApplicationBase::gotoFailedScreenScreenNoTransition()	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:103:6:void FrontendApplicationBase::gotoClearScreenScreenNoTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	1
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:109:6:void FrontendApplicationBase::gotoClearScreenScreenNoTransitionImpl()	7
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:96:6:void FrontendApplicationBase::gotoFailedScreenScreenNoTransitionImpl()	7
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:83:6:void FrontendApplicationBase::gotoGameScreenScreenNoTransitionImpl()	7
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:48:6:void FrontendApplicationBase::gotoMenuScreenScreenNoTransitionImpl()	7

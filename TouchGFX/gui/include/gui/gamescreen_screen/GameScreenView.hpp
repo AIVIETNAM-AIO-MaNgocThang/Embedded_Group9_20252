@@ -4,6 +4,7 @@
 #include <gui_generated/gamescreen_screen/GameScreenViewBase.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <touchgfx/Callback.hpp>
+#include <gui/common/LevelData.hpp>
 
 class GameScreenView : public GameScreenViewBase
 {
@@ -56,23 +57,22 @@ protected:
     // ---- Game Over guard ----
     bool gameOverTriggered;
     // ---- Vật cản ----
-    static const int MAX_OBSTACLES = 5;
+    static const int MAX_OBSTACLES = 25;
     struct Obstacle
     {
         Image img;
         bool  active;
     };
     Obstacle obstacles[MAX_OBSTACLES];
-    int spawnTimer;
-    int spawnInterval; // số tick giữa 2 lần spawn
 
-    void spawnObstacle();
+    void spawnObstacle(int16_t screenX, int16_t screenY);
     void updateObstacles();
     bool checkCollision(const Image& a, const Image& b);
     void onPlayerHit();
+    void onLevelClear();
 
     // Trong GameScreenView.hpp
-    static const int MAX_STEPS = 5;
+    static const int MAX_STEPS = 25;
     static const int MAX_STEP_HEIGHT = 4; // số ô tối đa chồng lên nhau
 
     struct Step
@@ -84,12 +84,12 @@ protected:
 
     Step steps[MAX_STEPS];
 
-    void spawnStep(uint8_t h);
+    void spawnStep(int16_t screenX, uint8_t h);
     bool checkStepCollision(Step& step);
     void updateSteps();
 
     // ---- Platform ----
-    static const int MAX_PLATFORMS = 3;
+    static const int MAX_PLATFORMS = 25;
     struct Platform
     {
         touchgfx::Image img;
@@ -98,10 +98,17 @@ protected:
 
     Platform platforms[MAX_PLATFORMS];
 
+    // ---- Level ----
+    LevelData levelData;
+    int32_t   cameraPixel;     // tổng px đã cuộn (bắt đầu từ 0)
+    uint16_t  nextSpawnIndex;  // con trỏ duyệt mảng obstacles[]
+
+    static const int16_t PLAYER_START_CELL = -15;  // ô bắt đầu
+
     // Platform mà player đang đứng
     Platform* currentPlatform;
 
-    void spawnPlatform();
+    void spawnPlatform(int16_t screenX, int16_t screenY);
     void updatePlatforms();
     bool checkPlatformLanding(Platform& platform);
     int16_t previousPlayerY;

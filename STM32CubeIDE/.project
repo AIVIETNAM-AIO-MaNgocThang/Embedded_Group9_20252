@@ -325,6 +325,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/LevelLoader.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/LevelLoader.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/level1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/level1.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/FailedScreenPresenter.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/failedscreen_screen/FailedScreenPresenter.cpp</locationURI>

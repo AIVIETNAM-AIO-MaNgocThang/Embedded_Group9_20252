@@ -1,11 +1,10 @@
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <touchgfx/Color.hpp>
+#include <gui/common/LevelLoader.hpp>
 
 GameScreenView::GameScreenView()
     : playerVelY(0),
 	  isJumping(false),
-	  spawnTimer(0),
-	  spawnInterval(90),
 	  pauseButtonClickedCallback(this, &GameScreenView::pauseButtonClicked),
 	  continueButtonClickedCallback(this, &GameScreenView::continueButtonClicked),
 	  tryAgainButtonClickedCallback(this, &GameScreenView::tryAgainButtonClicked),
@@ -14,7 +13,9 @@ GameScreenView::GameScreenView()
 	  ignoreNextClick(false),
 	  gameOverTriggered(false),
 	  previousPlayerY(140),
-	  tickCounter(0)
+	  tickCounter(0),
+	  cameraPixel(PLAYER_START_CELL * 16),
+	  nextSpawnIndex(0)
 {
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
@@ -80,6 +81,12 @@ void GameScreenView::setupScreen()
    }
 
     previousPlayerY = player.getY();
+
+    // ===== Load level =====
+    extern const uint8_t level1_data[];
+    extern const uint32_t level1_size;
+    LevelLoader::load(level1_data, level1_size, levelData);
+
     // --- Pause button ---
     remove(pauseButton);
     add(pauseButton);
@@ -130,7 +137,18 @@ void GameScreenView::handleTickEvent()
     bg1.moveTo(bg1.getX() - SCROLL_SPEED, bg1.getY());
     bg2.moveTo(bg2.getX() - SCROLL_SPEED, bg2.getY());
 
-    presenter->increaseDistance(SCROLL_SPEED);
+    // ===== Cập nhật % Progress vào Model =====
+    int32_t totalPixels = (int32_t)levelData.mapWidth * 16;
+    int32_t currentPixels = cameraPixel; // Vị trí hiện tại, 0 là ô đầu tiên của map
+    if (currentPixels < 0) currentPixels = 0;
+    if (currentPixels > totalPixels) currentPixels = totalPixels;
+    
+    int16_t progressPercent = 0;
+    if (totalPixels > 0)
+    {
+        progressPercent = (currentPixels * 100) / totalPixels;
+    }
+    presenter->setDistance(progressPercent);
 
     if (bg1.getX() <= -BG_WIDTH) bg1.moveTo(bg2.getX() + BG_WIDTH, bg1.getY());
     if (bg2.getX() <= -BG_WIDTH) bg2.moveTo(bg1.getX() + BG_WIDTH, bg2.getY());
@@ -152,15 +170,62 @@ void GameScreenView::handleTickEvent()
     player.moveTo(player.getX(), newY);
 
     // ===== Spawn & update obstacle =====
-    spawnTimer++;
+    // ===== Camera tracking =====
+    cameraPixel += SCROLL_SPEED;
 
-    if (spawnTimer == spawnInterval) spawnObstacle();
-    else if (spawnTimer == 2 * spawnInterval) spawnPlatform();
-    else if (spawnTimer == 3 * spawnInterval) spawnStep(1);
-    else if (spawnTimer >= 4 * spawnInterval)
+    // ===== Spawn theo vị trí camera =====
+    int32_t rightEdgePixel = cameraPixel + SCREEN_WIDTH;
+
+    while (nextSpawnIndex < levelData.obstacleCount)
     {
-    	spawnStep(2);
-        spawnTimer = 0;
+        ObstacleEntry& e = levelData.obstacles[nextSpawnIndex];
+
+        // Skip entry đã bị remove bởi resolveOverlaps
+        if (e.removed)
+        {
+            nextSpawnIndex++;
+            continue;
+        }
+
+        // Vị trí pixel tuyệt đối của entry
+        int32_t entryPixelX = (int32_t)e.x * 16;
+
+        // Chưa tới viewport → dừng
+        if (entryPixelX > rightEdgePixel) break;
+
+        // Tính vị trí trên màn hình
+        int16_t screenX = (int16_t)(entryPixelX - cameraPixel);
+
+        // Spawn theo loại
+        switch (e.type)
+        {
+            case OBS_STEP:
+                spawnStep(screenX, e.height);
+                break;
+
+            case OBS_SPIKE:
+                spawnObstacle(screenX, GROUND_Y + e.adjustY);
+                break;
+
+            case OBS_PLATFORM:
+            {
+                // Platform Y: đặt trên đầu player 1 khoảng
+                int16_t platY = GROUND_Y - 20 + e.adjustY;
+                spawnPlatform(screenX, platY);
+                break;
+            }
+        }
+
+        nextSpawnIndex++;
+    }
+
+    // ===== Kiểm tra hoàn thành map =====
+    int32_t completionPixel =
+        ((int32_t)levelData.mapWidth - PLAYER_START_CELL) * 16;
+
+    if (cameraPixel >= completionPixel)
+    {
+        onLevelClear();
     }
 
     updateObstacles();
@@ -169,13 +234,13 @@ void GameScreenView::handleTickEvent()
 }
 
 // Tạo vật cản
-void GameScreenView::spawnObstacle()
+void GameScreenView::spawnObstacle(int16_t screenX, int16_t screenY)
 {
     for (int i = 0; i < MAX_OBSTACLES; i++)
     {
         if (!obstacles[i].active)
         {
-            obstacles[i].img.setXY(320, 140); // chỉnh Y theo chiều cao ảnh obstacle thật
+            obstacles[i].img.setXY(screenX, GROUND_Y); // chỉnh Y theo chiều cao ảnh obstacle thật
             obstacles[i].img.setVisible(true);
             obstacles[i].active = true;
             invalidate();
@@ -216,13 +281,13 @@ bool GameScreenView::checkCollision(const Image& a, const Image& b)
 }
 
 // Tạo các phiến nhảy
-void GameScreenView::spawnPlatform()
+void GameScreenView::spawnPlatform(int16_t screenX, int16_t screenY)
 {
     for (int i = 0; i < MAX_PLATFORMS; i++)
     {
         if (!platforms[i].active)
         {
-            platforms[i].img.setXY(250, 120);
+            platforms[i].img.setXY(screenX, GROUND_Y - 16);
             platforms[i].img.setVisible(true);
             platforms[i].active = true;
             invalidate();
@@ -352,7 +417,7 @@ bool GameScreenView::checkPlatformLanding(
     return false;
 }
 
-void GameScreenView::spawnStep(uint8_t h)
+void GameScreenView::spawnStep(int16_t screenX, uint8_t h)
 {
     for (int i = 0; i < MAX_STEPS; i++)
     {
@@ -367,7 +432,7 @@ void GameScreenView::spawnStep(uint8_t h)
                 {
                     // Ô j: đặt từ mặt đất (GROUND_Y) chồng lên
                     int16_t blockY = GROUND_Y - (j * 16);
-                    steps[i].blocks[j].setXY(250, blockY);
+                    steps[i].blocks[j].setXY(screenX, blockY);
                     steps[i].blocks[j].setVisible(true);
                 }
                 else
@@ -473,6 +538,15 @@ void GameScreenView::onPlayerHit()
     application().gotoFailedScreenScreenNoTransition();
     // hoặc dùng transition nếu bạn đã cấu hình trong Designer:
     // application().gotoResultFailedScreen();
+}
+
+void GameScreenView::onLevelClear()
+{
+    if (gameOverTriggered) return;
+    gameOverTriggered = true;
+    isPaused = true;
+
+    application().gotoClearScreenScreenNoTransition();
 }
 
 void GameScreenView::handleClickEvent(const touchgfx::ClickEvent& evt)

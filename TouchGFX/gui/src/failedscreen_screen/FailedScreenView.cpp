@@ -61,7 +61,7 @@ void FailedScreenView::tearDownScreen()
 
 void FailedScreenView::tryAgainButtonClicked(const touchgfx::AbstractButtonContainer& src)
 {
-	presenter->resetAttempt();
+	presenter->increaseAttempt();
 	presenter->resetGameStats();
 	application().gotoMenuScreenScreenNoTransition();
 }

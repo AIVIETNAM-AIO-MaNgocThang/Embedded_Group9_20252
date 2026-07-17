@@ -6,7 +6,7 @@ C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/sr
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:20:6:void GameScreenPresenter::increaseAttempt()	0	static
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:25:6:void GameScreenPresenter::increaseJump()	0	static
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:30:6:void GameScreenPresenter::increasePlayTime()	0	static
-C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:35:6:void GameScreenPresenter::increaseDistance(int16_t)	0	static
+C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:35:6:void GameScreenPresenter::setDistance(int16_t)	0	static
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:40:6:void GameScreenPresenter::resetGameStats()	0	static
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:45:6:void GameScreenPresenter::resetAttempt()	0	static
 C:/Users/Admin/Downloads/HeNhung20260716.2/Embedded_Group9_20252/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:50:10:uint32_t GameScreenPresenter::getAttemptCount() const	0	static

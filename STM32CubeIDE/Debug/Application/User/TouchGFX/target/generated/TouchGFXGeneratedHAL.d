@@ -85,6 +85,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ ../../TouchGFX/gui/include/gui/common/LevelData.hpp \
  ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp \
@@ -237,6 +238,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+../../TouchGFX/gui/include/gui/common/LevelData.hpp:
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/failedscreen_screen/FailedScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/failedscreen_screen/FailedScreenPresenter.hpp:

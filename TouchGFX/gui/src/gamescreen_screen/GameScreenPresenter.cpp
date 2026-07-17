@@ -32,9 +32,9 @@ void GameScreenPresenter::increasePlayTime()
     model->playTime++;
 }
 
-void GameScreenPresenter::increaseDistance(int16_t delta)
+void GameScreenPresenter::setDistance(int16_t distance)
 {
-    model->distance += delta;
+    model->distance = distance;
 }
 
 void GameScreenPresenter::resetGameStats()

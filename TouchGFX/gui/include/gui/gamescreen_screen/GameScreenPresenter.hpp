@@ -29,7 +29,7 @@ public:
     void increaseAttempt();
     void increaseJump();
     void increasePlayTime();
-    void increaseDistance(int16_t delta);
+    void setDistance(int16_t distance);
     void resetAttempt();
     void resetGameStats();
 
