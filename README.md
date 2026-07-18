@@ -1,8 +1,49 @@
-# STM32F429I_DISCO_REV_D01 TBS
+# Geometry Dash - STM32F429 Discovery Kit
 
-The default IDE is set to STM32CubeIDE, to change IDE open the STM32F429I_DISCO_REV_D01.ioc with STM32CubeMX and select from the supported IDEs (EWARM from version 8.50.9, MDK-ARM, and STM32CubeIDE). Supports flashing of the STM32F429I_DISCO_DEV_D01 board directly from TouchGFX Designer using GCC and STM32CubeProgrammer. Flashing the board requires STM32CubeProgrammer which can be downloaded from the ST webpage. 
+Dự án mô phỏng tựa game nổi tiếng Geometry Dash chạy trên phần cứng nhúng **STM32F429I-DISCO**, thuộc môn học Hệ thống Nhúng (Embedded Systems) của kỳ 2025.2, Đại học Bách Khoa Hà Nội.
+Thành viên:
+- Ma Ngọc Thắng - 20235829
+- Lãnh Ngọc Khánh - 20235753
+- Hoàng Việt - 20235871
+Game được phát triển sử dụng ngôn ngữ **C/C++** trên môi trường **STM32CubeIDE** và giao diện đồ họa được thiết kế bằng **TouchGFX**.
 
-This TBS is configured for 320 x 240 pixels 16bpp screen resolution.  
+## Tính năng hiện tại (MVP)
+Dự án hiện tại đã đạt đến mức Minimum Viable Product (MVP) với một màn chơi hoàn chỉnh có thể chơi mượt mà trên kit thực tế. Các tính năng đã được triển khai bao gồm:
+- **Hệ thống màn hình cơ bản:** Menu chính, màn hình chơi game (Game Screen), màn hình kết quả (Failed Screen, Clear Screen).
+- **Vật lý & Chuyển động:** 
+  - Mô phỏng trọng lực, nhảy (nhấn vào màn hình) và rơi tự do cho nhân vật (Cube).
+  - Nền và chướng ngại vật cuộn liên tục tạo cảm giác nhân vật tiến về phía trước.
+- **Hệ thống chướng ngại vật đa dạng:**
+  - **Spike (Gai):** Chạm vào từ bất kỳ hướng nào đều dẫn đến cái chết (Game Over).
+  - **Platform (Bục):** Nhân vật có thể đứng trên bục hoặc nhảy lên bục từ dưới lên.
+  - **Step (Bậc):** Các khối hộp có thể xếp chồng lên nhau tạo thành địa hình. Nhân vật có thể di chuyển trên bề mặt trên cùng, nhưng va chạm vào mặt bên hoặc mặt dưới sẽ dẫn đến Game Over (hoặc bị chặn).
+- **Hệ thống màn chơi tự định nghĩa (.gdl):**
+  - Màn chơi được thiết kế thông qua cấu trúc dữ liệu nhị phân tùy chỉnh (đuôi file `.gdl`).
+  - Hỗ trợ parser tự động đọc file `.gdl` và giải quyết các trường hợp chướng ngại vật đè lên nhau cùng tọa độ.
+- **Thống kê phần chơi:** Ghi nhận và hiển thị phần trăm tiến độ (Progress), số lần thử (Attempts), số bước nhảy (Jumps) và thời gian chơi (Time) trên màn hình Failed/Clear.
 
-Performance testing can be done using the GPIO pins designated with the following signals: VSYNC_FREQ  - Pin PE2, RENDER_TIME - Pin PE3, FRAME_RATE  - Pin PE4, MCU_ACTIVE  - Pin PE5
- 
+## Lộ trình phát triển tiếp theo
+Dựa trên MVP hiện tại, dự án có kế hoạch mở rộng các tính năng sau theo thứ tự ưu tiên:
+### 1. Chọn nhiều màn chơi (Level Selection) - Ưu tiên: Cao
+- **Tính khả thi:** Rất cao.
+- **Công sức:** Thấp - Trung bình.
+- Bổ sung UI trên TouchGFX (Sử dụng ScrollList hoặc SwipeContainer).
+- Cho phép người chơi xem trước thông tin màn chơi (độ dài, biểu tượng độ khó) và chọn màn chơi yêu thích. Lưu tiến trình vào Model để GameScreen tải màn chơi tương ứng.
+### 2. Chế độ Phi thuyền (Ship Mode) - Ưu tiên: Cao
+- **Tính khả thi:** Rất cao.
+- **Công sức:** Trung bình.
+- Thêm chế độ chơi mới bên cạnh chế độ Cube mặc định (sử dụng cờ định dạng trong file .gdl).
+- Cơ chế vật lý khác biệt: Giữ màn hình để tăng tốc hướng lên, thả ra để rơi xuống theo trọng lực.
+- Địa hình bao gồm cả trần và đất. Va chạm với chướng ngại vật (Step), trần hay đất từ bất kỳ hướng nào đều dẫn đến Game Over.
+### 3. Lưu trữ tiến độ (Save Progress) - Ưu tiên: Trung bình
+- **Tính khả thi:** Cao.
+- **Công sức:** Trung bình.
+- Ghi nhận và lưu lại kỷ lục (phần trăm tiến độ cao nhất) hoặc số lần hoàn thành của từng màn chơi.
+- Sử dụng bộ nhớ Flash nội (Internal Flash) của STM32 hoặc Backup SRAM (với nguồn pin VBAT) để đảm bảo dữ liệu không bị mất khi tắt nguồn. Cần chú ý ghi Flash nội có thể làm treo CPU ngắn hạn.
+### 4. Phát nhạc nền (Background Music) - Ưu tiên: Thấp
+- **Tính khả thi:** Cao.
+- **Công sức:** Lớn.
+- Xuất âm thanh 8-bit qua 1 trong 2 kênh DAC tích hợp của STM32F429 ra loa ngoài.
+- Ứng dụng DMA kết hợp Timer để xuất tín hiệu tần số 4KHz đồng bộ, không làm ảnh hưởng đến hiệu năng 60 FPS của TouchGFX. File âm thanh lưu trữ dưới dạng mảng C.
+- Yêu cầu cấu hình thêm phần cứng khuếch đại âm thanh (vd: PAM8403, LM386) và loa vật lý.
+---
