@@ -5,6 +5,7 @@ Thành viên:
 - Ma Ngọc Thắng - 20235829
 - Lãnh Ngọc Khánh - 20235753
 - Hoàng Việt - 20235871
+
 Game được phát triển sử dụng ngôn ngữ **C/C++** trên môi trường **STM32CubeIDE** và giao diện đồ họa được thiết kế bằng **TouchGFX**.
 
 ## Tính năng hiện tại (MVP)
