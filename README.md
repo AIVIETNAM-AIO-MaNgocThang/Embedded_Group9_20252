@@ -47,4 +47,8 @@ Dựa trên MVP hiện tại, dự án có kế hoạch mở rộng các tính n
 - Xuất âm thanh 8-bit qua 1 trong 2 kênh DAC tích hợp của STM32F429 ra loa ngoài.
 - Ứng dụng DMA kết hợp Timer để xuất tín hiệu tần số 4KHz đồng bộ, không làm ảnh hưởng đến hiệu năng 60 FPS của TouchGFX. File âm thanh lưu trữ dưới dạng mảng C.
 - Yêu cầu cấu hình thêm phần cứng khuếch đại âm thanh (vd: PAM8403, LM386) và loa vật lý.
+### 5. Hỗ trợ điều khiển nhảy bằng phím USER_BUTTON (PA0) - Ưu tiên: Rất cao
+- **Tính khả thi:** Rất cao.
+- **Công sức:** Thấp.
+- Đọc trạng thái chân PA0 (hoặc dùng ngắt EXTI), gửi tín hiệu nút vào Presenter để cho vật thể nhảy lên.
 ---
