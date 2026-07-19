@@ -23,6 +23,11 @@ Dự án hiện tại đã đạt đến mức Minimum Viable Product (MVP) vớ
   - Hỗ trợ parser tự động đọc file `.gdl` và giải quyết các trường hợp chướng ngại vật đè lên nhau cùng tọa độ.
 - **Thống kê phần chơi:** Ghi nhận và hiển thị phần trăm tiến độ (Progress), số lần thử (Attempts), số bước nhảy (Jumps) và thời gian chơi (Time) trên màn hình Failed/Clear.
 
+## Cách setup
+Bước 1: Tải STM32CubeIDE 1.9 trở lên, TouchGFXDesigner 4.24.1 trở lên, và mã nguồn dự án.
+Bước 2: Mở file .project trong mã nguồn dự án.
+Bước 3: Trong STM32CubeIDE, Clean Project, Build Project, gắn kit STM32F429 Discovery Kit qua bộ nạp ST-LINK và Run.
+
 ## Lộ trình phát triển tiếp theo
 Dựa trên MVP hiện tại, dự án có kế hoạch mở rộng các tính năng sau theo thứ tự ưu tiên:
 ### 1. Chọn nhiều màn chơi (Level Selection) - Ưu tiên: Cao
