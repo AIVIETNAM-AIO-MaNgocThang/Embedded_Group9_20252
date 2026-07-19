@@ -32,30 +32,30 @@ Bước 3: Trong STM32CubeIDE, tiến hành Clean Project, Build Project, gắn 
 
 ## Lộ trình phát triển tiếp theo
 Dựa trên MVP hiện tại, dự án có kế hoạch mở rộng các tính năng sau theo thứ tự ưu tiên:
-### 1. Chọn nhiều màn chơi (Level Selection) - Ưu tiên: Cao
+### 1. Hỗ trợ điều khiển nhảy bằng phím USER_BUTTON (PA0) - Ưu tiên: Rất cao
+- **Tính khả thi:** Rất cao.
+- **Công sức:** Thấp.
+- Đọc trạng thái chân PA0 (hoặc dùng ngắt EXTI), gửi tín hiệu nút vào Presenter để cho vật thể nhảy lên.
+### 2. Chọn nhiều màn chơi (Level Selection) - Ưu tiên: Cao
 - **Tính khả thi:** Rất cao.
 - **Công sức:** Thấp - Trung bình.
 - Bổ sung UI trên TouchGFX (Sử dụng ScrollList hoặc SwipeContainer).
 - Cho phép người chơi xem trước thông tin màn chơi (độ dài, biểu tượng độ khó) và chọn màn chơi yêu thích. Lưu tiến trình vào Model để GameScreen tải màn chơi tương ứng.
-### 2. Chế độ Phi thuyền (Ship Mode) - Ưu tiên: Cao
+### 3. Chế độ Phi thuyền (Ship Mode) - Ưu tiên: Cao
 - **Tính khả thi:** Rất cao.
 - **Công sức:** Trung bình.
 - Thêm chế độ chơi mới bên cạnh chế độ Cube mặc định (sử dụng cờ định dạng trong file .gdl).
 - Cơ chế vật lý khác biệt: Giữ màn hình để tăng tốc hướng lên, thả ra để rơi xuống theo trọng lực.
 - Địa hình bao gồm cả trần và đất. Va chạm với chướng ngại vật (Step), trần hay đất từ bất kỳ hướng nào đều dẫn đến Game Over.
-### 3. Lưu trữ tiến độ (Save Progress) - Ưu tiên: Trung bình
+### 4. Lưu trữ tiến độ (Save Progress) - Ưu tiên: Trung bình
 - **Tính khả thi:** Cao.
 - **Công sức:** Trung bình.
 - Ghi nhận và lưu lại kỷ lục (phần trăm tiến độ cao nhất) hoặc số lần hoàn thành của từng màn chơi.
 - Sử dụng bộ nhớ Flash nội (Internal Flash) của STM32 hoặc Backup SRAM (với nguồn pin VBAT) để đảm bảo dữ liệu không bị mất khi tắt nguồn. Cần chú ý ghi Flash nội có thể làm treo CPU ngắn hạn.
-### 4. Phát nhạc nền (Background Music) - Ưu tiên: Thấp
+### 5. Phát nhạc nền (Background Music) - Ưu tiên: Thấp
 - **Tính khả thi:** Cao.
 - **Công sức:** Lớn.
 - Xuất âm thanh 8-bit qua 1 trong 2 kênh DAC tích hợp của STM32F429 ra loa ngoài.
 - Ứng dụng DMA kết hợp Timer để xuất tín hiệu tần số 4KHz đồng bộ, không làm ảnh hưởng đến hiệu năng 60 FPS của TouchGFX. File âm thanh lưu trữ dưới dạng mảng C.
 - Yêu cầu cấu hình thêm phần cứng khuếch đại âm thanh (vd: PAM8403, LM386) và loa vật lý.
-### 5. Hỗ trợ điều khiển nhảy bằng phím USER_BUTTON (PA0) - Ưu tiên: Rất cao
-- **Tính khả thi:** Rất cao.
-- **Công sức:** Thấp.
-- Đọc trạng thái chân PA0 (hoặc dùng ngắt EXTI), gửi tín hiệu nút vào Presenter để cho vật thể nhảy lên.
 ---
