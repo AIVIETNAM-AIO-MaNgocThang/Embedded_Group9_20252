@@ -26,7 +26,7 @@ Dự án hiện tại đã đạt đến mức Minimum Viable Product (MVP) vớ
 ## Cách setup
 Bước 1: Tải STM32CubeIDE 1.9 trở lên, TouchGFXDesigner 4.24.1 trở lên, và mã nguồn dự án.
 
-Bước 2: Mở file .project trong mã nguồn dự án.
+Bước 2: Mở file .project trong folder con STM32CubeIDE của mã nguồn dự án.
 
 Bước 3: Trong STM32CubeIDE, Clean Project, Build Project, gắn kit STM32F429 Discovery Kit qua bộ nạp ST-LINK và Run.
 
